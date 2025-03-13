@@ -10,7 +10,13 @@ def is_function(node):
     return node.kind in [clang.cindex.CursorKind.CONSTRUCTOR, clang.cindex.CursorKind.CXX_METHOD, clang.cindex.CursorKind.FUNCTION_DECL]
 
 def is_namespace(node):
-    return node.kind == clang.cindex.CursorKind.NAMESPACE
+    return node.kind in [clang.cindex.CursorKind.NAMESPACE]
+
+def uses_custom_type(node):
+    return node.kind in [clang.cindex.CursorKind.TYPE_REF]
 
 def is_custom_type(node):
     return node.kind in [clang.cindex.CursorKind.TYPE_ALIAS_DECL]
+
+def is_function_call(node):
+    return node.kind in [clang.cindex.CursorKind.CALL_EXPR]
