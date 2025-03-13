@@ -1,7 +1,7 @@
 import networkx as nx
 import clang.cindex
-from ontologie import Entity, FunctionEntity
-from node_filters import is_class,  is_custom_type, is_function, is_namespace, is_struct
+from ontologie import Entity, FunctionEntity,FunctionCallEntity
+from node_filters import is_class,  uses_custom_type, is_function, is_namespace, is_struct, is_custom_type, is_function_call
 
 def build_hierarchy_graph(node: clang.cindex.Cursor, graph: nx.DiGraph, parent_node: str = None) -> None:
     """
@@ -10,18 +10,30 @@ def build_hierarchy_graph(node: clang.cindex.Cursor, graph: nx.DiGraph, parent_n
     # Par exemple, gérer les namespaces, classes, fonctions, etc.
     if parent_node is None:
         entity = Entity(node)
-        graph.add_node(entity.name, entity=entity)
+        entity.add_to_graph(graph)
         parent_node = entity.name
 
     for child in node.get_children():
-        if is_class(child) or is_custom_type(child) or is_function(child) or is_namespace(child) or is_struct(child):
-            if is_function(child) : 
+        if is_class(child) or uses_custom_type(child) or is_function(child) or is_namespace(child) or is_struct(child) or is_custom_type(child) or is_function_call(child):
+
+            if is_function(child): 
                 child_entity = FunctionEntity(child)
+            elif is_function_call(child):
+                child_entity = FunctionCallEntity(child)
             else : 
                 child_entity = Entity(child)
-            graph.add_node(child_entity.name, entity=child_entity)
-            # Exemple d'ajout d'une relation, vous pouvez adapter en fonction de votre ontologie
-            graph.add_edge(parent_node, child_entity.name, relation=f'contains_{child.kind.name.lower()}')
+
+            relation=f'contains_{child.kind.name.lower()}'
+
+            if uses_custom_type(child): 
+                relation = f'uses_custom_type'
+
+            if is_function_call(child):
+                relation = f'calls_function'
+            
+            child_entity.add_to_graph(graph)
+
+            graph.add_edge(parent_node, child_entity.name, relation=relation)
             build_hierarchy_graph(child, graph, parent_node=child_entity.name)
         else:
             build_hierarchy_graph(child, graph, parent_node)
