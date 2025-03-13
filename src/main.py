@@ -7,7 +7,7 @@ from exporter import export_to_gml, export_to_graphml
 def main():
     parser = argparse.ArgumentParser(description="Parser l'AST d'un fichier source et l'exporter en format graphique.")
     parser.add_argument('--source', required=True, help="Chemin vers le fichier source à analyser")
-    parser.add_argument('--export', choices=['gml', 'graphml'], default='gml', help="Format d'export")
+    parser.add_argument('--export', choices=['gml', 'graphml'], default='graphml', help="Format d'export")
     parser.add_argument('--output', default="graph_output", help="Nom de base du fichier de sortie (sans extension)")
     args = parser.parse_args()
 
