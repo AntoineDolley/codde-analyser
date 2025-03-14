@@ -62,7 +62,7 @@ class Entity:
             parent = parent.semantic_parent
 
         if parts :
-            namespace_position = f"{"::".join(parts)}::{self.name}"
+            namespace_position = f"{'::'.join(parts)}::{self.name}"
         else :
             namespace_position = self.name
 
