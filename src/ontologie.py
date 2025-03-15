@@ -155,5 +155,5 @@ class TypeRefEntity(Entity):
         # Appel à l'initialisation de la classe parente pour récupérer les autres attributs
         super().__init__(node)
         # On remplace le nom par la signature complète
-        self.namespace_position = self._build_namespace_position(node)
-        self.name = f"{self.decl_file}#{self.namespace_position}"
+        self.namespace_position = self.name
+        print(f"self.namespace_position{self.namespace_position}")
