@@ -14,492 +14,492 @@
       <data key="d3">0</data>
       <data key="d4">./test_code/src/test_code.cpp</data>
     </node>
-    <node id="./test_code/src/../Include/test_code.h#CustomTypes">
-      <data key="d0">./test_code/src/../Include/test_code.h#CustomTypes</data>
-      <data key="d1">./test_code/src/../Include/test_code.h</data>
+    <node id="test_code/Include/test_code.h#CustomTypes">
+      <data key="d0">test_code/Include/test_code.h#CustomTypes</data>
+      <data key="d1">test_code/Include/test_code.h</data>
       <data key="d2">8</data>
       <data key="d3">11</data>
       <data key="d4">CustomTypes</data>
     </node>
-    <node id="./test_code/src/../Include/test_code.h#CustomTypes::StringType">
-      <data key="d0">./test_code/src/../Include/test_code.h#CustomTypes::StringType</data>
-      <data key="d1">./test_code/src/../Include/test_code.h</data>
+    <node id="test_code/Include/test_code.h#CustomTypes::StringType">
+      <data key="d0">test_code/Include/test_code.h#CustomTypes::StringType</data>
+      <data key="d1">test_code/Include/test_code.h</data>
       <data key="d2">9</data>
       <data key="d3">11</data>
-      <data key="d4">./test_code/src/../Include/test_code.h#CustomTypes::StringType</data>
+      <data key="d4">test_code/Include/test_code.h#CustomTypes::StringType</data>
     </node>
-    <node id="/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stringfwd.h#std::string">
-      <data key="d0">/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stringfwd.h#std::string</data>
-      <data key="d1">/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stringfwd.h</data>
+    <node id="/include/c++/13/bits/stringfwd.h#std::string">
+      <data key="d0">/include/c++/13/bits/stringfwd.h#std::string</data>
+      <data key="d1">/include/c++/13/bits/stringfwd.h</data>
       <data key="d2">77</data>
       <data key="d3">33</data>
-      <data key="d4">/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stringfwd.h#std::string</data>
+      <data key="d4">/include/c++/13/bits/stringfwd.h#std::string</data>
     </node>
-    <node id="./test_code/src/../Include/test_code.h#CustomTypes::SizeType">
-      <data key="d0">./test_code/src/../Include/test_code.h#CustomTypes::SizeType</data>
-      <data key="d1">./test_code/src/../Include/test_code.h</data>
+    <node id="test_code/Include/test_code.h#CustomTypes::SizeType">
+      <data key="d0">test_code/Include/test_code.h#CustomTypes::SizeType</data>
+      <data key="d1">test_code/Include/test_code.h</data>
       <data key="d2">10</data>
       <data key="d3">11</data>
       <data key="d4">CustomTypes::SizeType</data>
     </node>
-    <node id="/../lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13/bits/c++config.h#std::size_t">
-      <data key="d0">/../lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13/bits/c++config.h#std::size_t</data>
-      <data key="d1">/../lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13/bits/c++config.h</data>
+    <node id="/include/x86_64-linux-gnu/c++/13/bits/c++config.h#std::size_t">
+      <data key="d0">/include/x86_64-linux-gnu/c++/13/bits/c++config.h#std::size_t</data>
+      <data key="d1">/include/x86_64-linux-gnu/c++/13/bits/c++config.h</data>
       <data key="d2">308</data>
       <data key="d3">26</data>
-      <data key="d4">/../lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13/bits/c++config.h#std::size_t</data>
+      <data key="d4">/include/x86_64-linux-gnu/c++/13/bits/c++config.h#std::size_t</data>
     </node>
-    <node id="./test_code/src/../Include/test_code.h#CustomTypes::IntegerType">
-      <data key="d0">./test_code/src/../Include/test_code.h#CustomTypes::IntegerType</data>
-      <data key="d1">./test_code/src/../Include/test_code.h</data>
+    <node id="test_code/Include/test_code.h#CustomTypes::IntegerType">
+      <data key="d0">test_code/Include/test_code.h#CustomTypes::IntegerType</data>
+      <data key="d1">test_code/Include/test_code.h</data>
       <data key="d2">11</data>
       <data key="d3">11</data>
-      <data key="d4">./test_code/src/../Include/test_code.h#CustomTypes::IntegerType</data>
+      <data key="d4">test_code/Include/test_code.h#CustomTypes::IntegerType</data>
     </node>
-    <node id="./test_code/src/../Include/test_code.h#Entities">
-      <data key="d0">./test_code/src/../Include/test_code.h#Entities</data>
-      <data key="d1">./test_code/src/../Include/test_code.h</data>
+    <node id="test_code/Include/test_code.h#Entities">
+      <data key="d0">test_code/Include/test_code.h#Entities</data>
+      <data key="d1">test_code/Include/test_code.h</data>
       <data key="d2">14</data>
       <data key="d3">11</data>
       <data key="d4">Entities</data>
     </node>
-    <node id="./test_code/src/../Include/test_code.h#Entities::Person">
-      <data key="d0">./test_code/src/../Include/test_code.h#Entities::Person</data>
-      <data key="d1">./test_code/src/../Include/test_code.h</data>
+    <node id="test_code/Include/test_code.h#Entities::Person">
+      <data key="d0">test_code/Include/test_code.h#Entities::Person</data>
+      <data key="d1">test_code/Include/test_code.h</data>
       <data key="d2">16</data>
       <data key="d3">11</data>
-      <data key="d4">./test_code/src/../Include/test_code.h#Entities::Person</data>
+      <data key="d4">test_code/Include/test_code.h#Entities::Person</data>
     </node>
-    <node id="./test_code/src/../Include/test_code.h#Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)">
-      <data key="d0">./test_code/src/../Include/test_code.h#Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)</data>
-      <data key="d1">./test_code/src/../Include/test_code.h</data>
+    <node id="test_code/Include/test_code.h#Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)">
+      <data key="d0">test_code/Include/test_code.h#Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)</data>
+      <data key="d1">test_code/Include/test_code.h</data>
       <data key="d2">22</data>
       <data key="d3">9</data>
       <data key="d4">Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)</data>
     </node>
-    <node id="./test_code/src/../Include/test_code.h#Entities::Person::getName()">
-      <data key="d0">./test_code/src/../Include/test_code.h#Entities::Person::getName()</data>
-      <data key="d1">./test_code/src/../Include/test_code.h</data>
+    <node id="test_code/Include/test_code.h#Entities::Person::getName()">
+      <data key="d0">test_code/Include/test_code.h#Entities::Person::getName()</data>
+      <data key="d1">test_code/Include/test_code.h</data>
       <data key="d2">23</data>
       <data key="d3">33</data>
       <data key="d4">Entities::Person::getName()</data>
     </node>
-    <node id="./test_code/src/../Include/test_code.h#Entities::Person::setName(const CustomTypes::StringType &amp; newName)">
-      <data key="d0">./test_code/src/../Include/test_code.h#Entities::Person::setName(const CustomTypes::StringType &amp; newName)</data>
-      <data key="d1">./test_code/src/../Include/test_code.h</data>
+    <node id="test_code/Include/test_code.h#Entities::Person::setName(const CustomTypes::StringType &amp; newName)">
+      <data key="d0">test_code/Include/test_code.h#Entities::Person::setName(const CustomTypes::StringType &amp; newName)</data>
+      <data key="d1">test_code/Include/test_code.h</data>
       <data key="d2">24</data>
       <data key="d3">14</data>
       <data key="d4">Entities::Person::setName(const CustomTypes::StringType &amp; newName)</data>
     </node>
-    <node id="./test_code/src/../Include/test_code.h#Entities::Person::getAge()">
-      <data key="d0">./test_code/src/../Include/test_code.h#Entities::Person::getAge()</data>
-      <data key="d1">./test_code/src/../Include/test_code.h</data>
+    <node id="test_code/Include/test_code.h#Entities::Person::getAge()">
+      <data key="d0">test_code/Include/test_code.h#Entities::Person::getAge()</data>
+      <data key="d1">test_code/Include/test_code.h</data>
       <data key="d2">25</data>
       <data key="d3">34</data>
       <data key="d4">Entities::Person::getAge()</data>
     </node>
-    <node id="./test_code/src/../Include/test_code.h#Entities::Person::setAge(CustomTypes::IntegerType newAge)">
-      <data key="d0">./test_code/src/../Include/test_code.h#Entities::Person::setAge(CustomTypes::IntegerType newAge)</data>
-      <data key="d1">./test_code/src/../Include/test_code.h</data>
+    <node id="test_code/Include/test_code.h#Entities::Person::setAge(CustomTypes::IntegerType newAge)">
+      <data key="d0">test_code/Include/test_code.h#Entities::Person::setAge(CustomTypes::IntegerType newAge)</data>
+      <data key="d1">test_code/Include/test_code.h</data>
       <data key="d2">26</data>
       <data key="d3">14</data>
       <data key="d4">Entities::Person::setAge(CustomTypes::IntegerType newAge)</data>
     </node>
-    <node id="./test_code/src/../Include/test_code.h#Entities::Company">
-      <data key="d0">./test_code/src/../Include/test_code.h#Entities::Company</data>
-      <data key="d1">./test_code/src/../Include/test_code.h</data>
+    <node id="test_code/Include/test_code.h#Entities::Company">
+      <data key="d0">test_code/Include/test_code.h#Entities::Company</data>
+      <data key="d1">test_code/Include/test_code.h</data>
       <data key="d2">29</data>
       <data key="d3">11</data>
-      <data key="d4">./test_code/src/../Include/test_code.h#Entities::Company</data>
+      <data key="d4">test_code/Include/test_code.h#Entities::Company</data>
     </node>
-    <node id="./test_code/src/../Include/test_code.h#Entities::Company::Company(const CustomTypes::StringType &amp; companyName)">
-      <data key="d0">./test_code/src/../Include/test_code.h#Entities::Company::Company(const CustomTypes::StringType &amp; companyName)</data>
-      <data key="d1">./test_code/src/../Include/test_code.h</data>
+    <node id="test_code/Include/test_code.h#Entities::Company::Company(const CustomTypes::StringType &amp; companyName)">
+      <data key="d0">test_code/Include/test_code.h#Entities::Company::Company(const CustomTypes::StringType &amp; companyName)</data>
+      <data key="d1">test_code/Include/test_code.h</data>
       <data key="d2">35</data>
       <data key="d3">9</data>
       <data key="d4">Entities::Company::Company(const CustomTypes::StringType &amp; companyName)</data>
     </node>
-    <node id="./test_code/src/../Include/test_code.h#Entities::Company::addEmployee(const Person &amp; employee)">
-      <data key="d0">./test_code/src/../Include/test_code.h#Entities::Company::addEmployee(const Person &amp; employee)</data>
-      <data key="d1">./test_code/src/../Include/test_code.h</data>
+    <node id="test_code/Include/test_code.h#Entities::Company::addEmployee(const Person &amp; employee)">
+      <data key="d0">test_code/Include/test_code.h#Entities::Company::addEmployee(const Person &amp; employee)</data>
+      <data key="d1">test_code/Include/test_code.h</data>
       <data key="d2">36</data>
       <data key="d3">14</data>
       <data key="d4">Entities::Company::addEmployee(const Person &amp; employee)</data>
     </node>
-    <node id="./test_code/src/../Include/test_code.h#Entities::Company::getCompanyName()">
-      <data key="d0">./test_code/src/../Include/test_code.h#Entities::Company::getCompanyName()</data>
-      <data key="d1">./test_code/src/../Include/test_code.h</data>
+    <node id="test_code/Include/test_code.h#Entities::Company::getCompanyName()">
+      <data key="d0">test_code/Include/test_code.h#Entities::Company::getCompanyName()</data>
+      <data key="d1">test_code/Include/test_code.h</data>
       <data key="d2">37</data>
       <data key="d3">33</data>
       <data key="d4">Entities::Company::getCompanyName()</data>
     </node>
-    <node id="./test_code/src/../Include/test_code.h#Actions">
-      <data key="d0">./test_code/src/../Include/test_code.h#Actions</data>
-      <data key="d1">./test_code/src/../Include/test_code.h</data>
+    <node id="test_code/Include/test_code.h#Actions">
+      <data key="d0">test_code/Include/test_code.h#Actions</data>
+      <data key="d1">test_code/Include/test_code.h</data>
       <data key="d2">41</data>
       <data key="d3">11</data>
       <data key="d4">Actions</data>
     </node>
-    <node id="./test_code/src/../Include/test_code.h#Actions::displayPersonInfo(const Entities::Person &amp; person)">
-      <data key="d0">./test_code/src/../Include/test_code.h#Actions::displayPersonInfo(const Entities::Person &amp; person)</data>
-      <data key="d1">./test_code/src/../Include/test_code.h</data>
+    <node id="test_code/Include/test_code.h#Actions::displayPersonInfo(const Entities::Person &amp; person)">
+      <data key="d0">test_code/Include/test_code.h#Actions::displayPersonInfo(const Entities::Person &amp; person)</data>
+      <data key="d1">test_code/Include/test_code.h</data>
       <data key="d2">43</data>
       <data key="d3">10</data>
       <data key="d4">Actions::displayPersonInfo(const Entities::Person &amp; person)</data>
     </node>
-    <node id="./test_code/src/../Include/test_code.h#Actions::displayCompanyInfo(const Entities::Company &amp; company)">
-      <data key="d0">./test_code/src/../Include/test_code.h#Actions::displayCompanyInfo(const Entities::Company &amp; company)</data>
-      <data key="d1">./test_code/src/../Include/test_code.h</data>
+    <node id="test_code/Include/test_code.h#Actions::displayCompanyInfo(const Entities::Company &amp; company)">
+      <data key="d0">test_code/Include/test_code.h#Actions::displayCompanyInfo(const Entities::Company &amp; company)</data>
+      <data key="d1">test_code/Include/test_code.h</data>
       <data key="d2">44</data>
       <data key="d3">10</data>
       <data key="d4">Actions::displayCompanyInfo(const Entities::Company &amp; company)</data>
     </node>
-    <node id="./test_code/src/test_code.cpp#Entities">
-      <data key="d0">./test_code/src/test_code.cpp#Entities</data>
-      <data key="d1">./test_code/src/test_code.cpp</data>
+    <node id="test_code/src/test_code.cpp#Entities">
+      <data key="d0">test_code/src/test_code.cpp#Entities</data>
+      <data key="d1">test_code/src/test_code.cpp</data>
       <data key="d2">3</data>
       <data key="d3">11</data>
       <data key="d4">Entities</data>
     </node>
-    <node id="./test_code/src/test_code.cpp#Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)">
-      <data key="d0">./test_code/src/test_code.cpp#Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)</data>
-      <data key="d1">./test_code/src/test_code.cpp</data>
+    <node id="test_code/src/test_code.cpp#Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)">
+      <data key="d0">test_code/src/test_code.cpp#Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)</data>
+      <data key="d1">test_code/src/test_code.cpp</data>
       <data key="d2">6</data>
       <data key="d3">13</data>
       <data key="d4">Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)</data>
     </node>
-    <node id="./test_code/src/test_code.cpp#Entities::Person::getName()">
-      <data key="d0">./test_code/src/test_code.cpp#Entities::Person::getName()</data>
-      <data key="d1">./test_code/src/test_code.cpp</data>
+    <node id="test_code/src/test_code.cpp#Entities::Person::getName()">
+      <data key="d0">test_code/src/test_code.cpp#Entities::Person::getName()</data>
+      <data key="d1">test_code/src/test_code.cpp</data>
       <data key="d2">9</data>
       <data key="d3">37</data>
       <data key="d4">Entities::Person::getName()</data>
     </node>
-    <node id="./test_code/src/test_code.cpp#Entities::Person::setName(const CustomTypes::StringType &amp; newName)">
-      <data key="d0">./test_code/src/test_code.cpp#Entities::Person::setName(const CustomTypes::StringType &amp; newName)</data>
-      <data key="d1">./test_code/src/test_code.cpp</data>
+    <node id="test_code/src/test_code.cpp#Entities::Person::setName(const CustomTypes::StringType &amp; newName)">
+      <data key="d0">test_code/src/test_code.cpp#Entities::Person::setName(const CustomTypes::StringType &amp; newName)</data>
+      <data key="d1">test_code/src/test_code.cpp</data>
       <data key="d2">13</data>
       <data key="d3">18</data>
       <data key="d4">Entities::Person::setName(const CustomTypes::StringType &amp; newName)</data>
     </node>
-    <node id="./test_code/src/test_code.cpp#Entities::Person::getAge()">
-      <data key="d0">./test_code/src/test_code.cpp#Entities::Person::getAge()</data>
-      <data key="d1">./test_code/src/test_code.cpp</data>
+    <node id="test_code/src/test_code.cpp#Entities::Person::getAge()">
+      <data key="d0">test_code/src/test_code.cpp#Entities::Person::getAge()</data>
+      <data key="d1">test_code/src/test_code.cpp</data>
       <data key="d2">17</data>
       <data key="d3">38</data>
       <data key="d4">Entities::Person::getAge()</data>
     </node>
-    <node id="./test_code/src/test_code.cpp#Entities::Person::setAge(CustomTypes::IntegerType newAge)">
-      <data key="d0">./test_code/src/test_code.cpp#Entities::Person::setAge(CustomTypes::IntegerType newAge)</data>
-      <data key="d1">./test_code/src/test_code.cpp</data>
+    <node id="test_code/src/test_code.cpp#Entities::Person::setAge(CustomTypes::IntegerType newAge)">
+      <data key="d0">test_code/src/test_code.cpp#Entities::Person::setAge(CustomTypes::IntegerType newAge)</data>
+      <data key="d1">test_code/src/test_code.cpp</data>
       <data key="d2">21</data>
       <data key="d3">18</data>
       <data key="d4">Entities::Person::setAge(CustomTypes::IntegerType newAge)</data>
     </node>
-    <node id="./test_code/src/test_code.cpp#Entities::Company::Company(const CustomTypes::StringType &amp; companyName)">
-      <data key="d0">./test_code/src/test_code.cpp#Entities::Company::Company(const CustomTypes::StringType &amp; companyName)</data>
-      <data key="d1">./test_code/src/test_code.cpp</data>
+    <node id="test_code/src/test_code.cpp#Entities::Company::Company(const CustomTypes::StringType &amp; companyName)">
+      <data key="d0">test_code/src/test_code.cpp#Entities::Company::Company(const CustomTypes::StringType &amp; companyName)</data>
+      <data key="d1">test_code/src/test_code.cpp</data>
       <data key="d2">26</data>
       <data key="d3">14</data>
       <data key="d4">Entities::Company::Company(const CustomTypes::StringType &amp; companyName)</data>
     </node>
-    <node id="./test_code/src/test_code.cpp#Entities::Company::addEmployee(const Person &amp; employee)">
-      <data key="d0">./test_code/src/test_code.cpp#Entities::Company::addEmployee(const Person &amp; employee)</data>
-      <data key="d1">./test_code/src/test_code.cpp</data>
+    <node id="test_code/src/test_code.cpp#Entities::Company::addEmployee(const Person &amp; employee)">
+      <data key="d0">test_code/src/test_code.cpp#Entities::Company::addEmployee(const Person &amp; employee)</data>
+      <data key="d1">test_code/src/test_code.cpp</data>
       <data key="d2">29</data>
       <data key="d3">19</data>
       <data key="d4">Entities::Company::addEmployee(const Person &amp; employee)</data>
     </node>
-    <node id="./test_code/src/test_code.cpp#Entities::Company::getCompanyName()">
-      <data key="d0">./test_code/src/test_code.cpp#Entities::Company::getCompanyName()</data>
-      <data key="d1">./test_code/src/test_code.cpp</data>
+    <node id="test_code/src/test_code.cpp#Entities::Company::getCompanyName()">
+      <data key="d0">test_code/src/test_code.cpp#Entities::Company::getCompanyName()</data>
+      <data key="d1">test_code/src/test_code.cpp</data>
       <data key="d2">33</data>
       <data key="d3">38</data>
       <data key="d4">Entities::Company::getCompanyName()</data>
     </node>
-    <node id="./test_code/src/test_code.cpp#Actions">
-      <data key="d0">./test_code/src/test_code.cpp#Actions</data>
-      <data key="d1">./test_code/src/test_code.cpp</data>
+    <node id="test_code/src/test_code.cpp#Actions">
+      <data key="d0">test_code/src/test_code.cpp#Actions</data>
+      <data key="d1">test_code/src/test_code.cpp</data>
       <data key="d2">38</data>
       <data key="d3">11</data>
       <data key="d4">Actions</data>
     </node>
-    <node id="./test_code/src/test_code.cpp#Actions::displayPersonInfo(const Entities::Person &amp; person)">
-      <data key="d0">./test_code/src/test_code.cpp#Actions::displayPersonInfo(const Entities::Person &amp; person)</data>
-      <data key="d1">./test_code/src/test_code.cpp</data>
+    <node id="test_code/src/test_code.cpp#Actions::displayPersonInfo(const Entities::Person &amp; person)">
+      <data key="d0">test_code/src/test_code.cpp#Actions::displayPersonInfo(const Entities::Person &amp; person)</data>
+      <data key="d1">test_code/src/test_code.cpp</data>
       <data key="d2">40</data>
       <data key="d3">10</data>
       <data key="d4">Actions::displayPersonInfo(const Entities::Person &amp; person)</data>
     </node>
-    <node id="./test_code/src/test_code.cpp#">
-      <data key="d0">./test_code/src/test_code.cpp#</data>
-      <data key="d1">./test_code/src/test_code.cpp</data>
+    <node id="test_code/src/test_code.cpp#">
+      <data key="d0">test_code/src/test_code.cpp#</data>
+      <data key="d1">test_code/src/test_code.cpp</data>
       <data key="d2">45</data>
       <data key="d3">37</data>
       <data key="d4" />
     </node>
-    <node id="./test_code/src/test_code.cpp#Entities::Person::getAge">
-      <data key="d0">./test_code/src/test_code.cpp#Entities::Person::getAge</data>
-      <data key="d1">./test_code/src/test_code.cpp</data>
+    <node id="test_code/src/test_code.cpp#Entities::Person::getAge">
+      <data key="d0">test_code/src/test_code.cpp#Entities::Person::getAge</data>
+      <data key="d1">test_code/src/test_code.cpp</data>
       <data key="d2">17</data>
       <data key="d3">38</data>
       <data key="d4">Entities::Person::getAge</data>
     </node>
-    <node id="./test_code/src/test_code.cpp#Actions::displayCompanyInfo(const Entities::Company &amp; company)">
-      <data key="d0">./test_code/src/test_code.cpp#Actions::displayCompanyInfo(const Entities::Company &amp; company)</data>
-      <data key="d1">./test_code/src/test_code.cpp</data>
+    <node id="test_code/src/test_code.cpp#Actions::displayCompanyInfo(const Entities::Company &amp; company)">
+      <data key="d0">test_code/src/test_code.cpp#Actions::displayCompanyInfo(const Entities::Company &amp; company)</data>
+      <data key="d1">test_code/src/test_code.cpp</data>
       <data key="d2">44</data>
       <data key="d3">10</data>
       <data key="d4">Actions::displayCompanyInfo(const Entities::Company &amp; company)</data>
     </node>
-    <node id="./test_code/src/test_code.cpp#main()">
-      <data key="d0">./test_code/src/test_code.cpp#main()</data>
-      <data key="d1">./test_code/src/test_code.cpp</data>
+    <node id="test_code/src/test_code.cpp#main()">
+      <data key="d0">test_code/src/test_code.cpp#main()</data>
+      <data key="d1">test_code/src/test_code.cpp</data>
       <data key="d2">49</data>
       <data key="d3">5</data>
       <data key="d4">main()</data>
     </node>
-    <node id="./test_code/src/test_code.cpp#Entities::Company::addEmployee">
-      <data key="d0">./test_code/src/test_code.cpp#Entities::Company::addEmployee</data>
-      <data key="d1">./test_code/src/test_code.cpp</data>
+    <node id="test_code/src/test_code.cpp#Entities::Company::addEmployee">
+      <data key="d0">test_code/src/test_code.cpp#Entities::Company::addEmployee</data>
+      <data key="d1">test_code/src/test_code.cpp</data>
       <data key="d2">29</data>
       <data key="d3">19</data>
       <data key="d4">Entities::Company::addEmployee</data>
     </node>
-    <node id="./test_code/src/test_code.cpp#Actions::displayPersonInfo">
-      <data key="d0">./test_code/src/test_code.cpp#Actions::displayPersonInfo</data>
-      <data key="d1">./test_code/src/test_code.cpp</data>
+    <node id="test_code/src/test_code.cpp#Actions::displayPersonInfo">
+      <data key="d0">test_code/src/test_code.cpp#Actions::displayPersonInfo</data>
+      <data key="d1">test_code/src/test_code.cpp</data>
       <data key="d2">40</data>
       <data key="d3">10</data>
       <data key="d4">Actions::displayPersonInfo</data>
     </node>
-    <node id="./test_code/src/test_code.cpp#Actions::displayCompanyInfo">
-      <data key="d0">./test_code/src/test_code.cpp#Actions::displayCompanyInfo</data>
-      <data key="d1">./test_code/src/test_code.cpp</data>
+    <node id="test_code/src/test_code.cpp#Actions::displayCompanyInfo">
+      <data key="d0">test_code/src/test_code.cpp#Actions::displayCompanyInfo</data>
+      <data key="d1">test_code/src/test_code.cpp</data>
       <data key="d2">44</data>
       <data key="d3">10</data>
       <data key="d4">Actions::displayCompanyInfo</data>
     </node>
-    <edge source="./test_code/src/test_code.cpp#./test_code/src/test_code.cpp" target="./test_code/src/../Include/test_code.h#CustomTypes">
+    <edge source="./test_code/src/test_code.cpp#./test_code/src/test_code.cpp" target="test_code/Include/test_code.h#CustomTypes">
       <data key="d5">contains_namespace</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#./test_code/src/test_code.cpp" target="./test_code/src/../Include/test_code.h#Entities">
+    <edge source="./test_code/src/test_code.cpp#./test_code/src/test_code.cpp" target="test_code/Include/test_code.h#Entities">
       <data key="d5">contains_namespace</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#./test_code/src/test_code.cpp" target="./test_code/src/../Include/test_code.h#Actions">
+    <edge source="./test_code/src/test_code.cpp#./test_code/src/test_code.cpp" target="test_code/Include/test_code.h#Actions">
       <data key="d5">contains_namespace</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#./test_code/src/test_code.cpp" target="./test_code/src/test_code.cpp#Entities">
+    <edge source="./test_code/src/test_code.cpp#./test_code/src/test_code.cpp" target="test_code/src/test_code.cpp#Entities">
       <data key="d5">contains_namespace</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#./test_code/src/test_code.cpp" target="./test_code/src/test_code.cpp#Actions">
+    <edge source="./test_code/src/test_code.cpp#./test_code/src/test_code.cpp" target="test_code/src/test_code.cpp#Actions">
       <data key="d5">contains_namespace</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#./test_code/src/test_code.cpp" target="./test_code/src/test_code.cpp#main()">
+    <edge source="./test_code/src/test_code.cpp#./test_code/src/test_code.cpp" target="test_code/src/test_code.cpp#main()">
       <data key="d5">contains_function_decl</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#CustomTypes" target="./test_code/src/../Include/test_code.h#CustomTypes::StringType">
+    <edge source="test_code/Include/test_code.h#CustomTypes" target="test_code/Include/test_code.h#CustomTypes::StringType">
       <data key="d5">contains_type_alias_decl</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#CustomTypes" target="./test_code/src/../Include/test_code.h#CustomTypes::SizeType">
+    <edge source="test_code/Include/test_code.h#CustomTypes" target="test_code/Include/test_code.h#CustomTypes::SizeType">
       <data key="d5">contains_type_alias_decl</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#CustomTypes" target="./test_code/src/../Include/test_code.h#CustomTypes::IntegerType">
+    <edge source="test_code/Include/test_code.h#CustomTypes" target="test_code/Include/test_code.h#CustomTypes::IntegerType">
       <data key="d5">contains_type_alias_decl</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#CustomTypes::StringType" target="/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stringfwd.h#std::string">
+    <edge source="test_code/Include/test_code.h#CustomTypes::StringType" target="/include/c++/13/bits/stringfwd.h#std::string">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#CustomTypes::SizeType" target="/../lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13/bits/c++config.h#std::size_t">
+    <edge source="test_code/Include/test_code.h#CustomTypes::SizeType" target="/include/x86_64-linux-gnu/c++/13/bits/c++config.h#std::size_t">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Entities" target="./test_code/src/../Include/test_code.h#Entities::Person">
+    <edge source="test_code/Include/test_code.h#Entities" target="test_code/Include/test_code.h#Entities::Person">
       <data key="d5">contains_class_decl</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Entities" target="./test_code/src/../Include/test_code.h#Entities::Company">
+    <edge source="test_code/Include/test_code.h#Entities" target="test_code/Include/test_code.h#Entities::Company">
       <data key="d5">contains_class_decl</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Entities::Person" target="./test_code/src/../Include/test_code.h#CustomTypes::StringType">
+    <edge source="test_code/Include/test_code.h#Entities::Person" target="test_code/Include/test_code.h#CustomTypes::StringType">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Entities::Person" target="./test_code/src/../Include/test_code.h#CustomTypes::IntegerType">
+    <edge source="test_code/Include/test_code.h#Entities::Person" target="test_code/Include/test_code.h#CustomTypes::IntegerType">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Entities::Person" target="./test_code/src/../Include/test_code.h#Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)">
+    <edge source="test_code/Include/test_code.h#Entities::Person" target="test_code/Include/test_code.h#Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)">
       <data key="d5">contains_constructor</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Entities::Person" target="./test_code/src/../Include/test_code.h#Entities::Person::getName()">
+    <edge source="test_code/Include/test_code.h#Entities::Person" target="test_code/Include/test_code.h#Entities::Person::getName()">
       <data key="d5">contains_cxx_method</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Entities::Person" target="./test_code/src/../Include/test_code.h#Entities::Person::setName(const CustomTypes::StringType &amp; newName)">
+    <edge source="test_code/Include/test_code.h#Entities::Person" target="test_code/Include/test_code.h#Entities::Person::setName(const CustomTypes::StringType &amp; newName)">
       <data key="d5">contains_cxx_method</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Entities::Person" target="./test_code/src/../Include/test_code.h#Entities::Person::getAge()">
+    <edge source="test_code/Include/test_code.h#Entities::Person" target="test_code/Include/test_code.h#Entities::Person::getAge()">
       <data key="d5">contains_cxx_method</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Entities::Person" target="./test_code/src/../Include/test_code.h#Entities::Person::setAge(CustomTypes::IntegerType newAge)">
+    <edge source="test_code/Include/test_code.h#Entities::Person" target="test_code/Include/test_code.h#Entities::Person::setAge(CustomTypes::IntegerType newAge)">
       <data key="d5">contains_cxx_method</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)" target="./test_code/src/../Include/test_code.h#CustomTypes::StringType">
+    <edge source="test_code/Include/test_code.h#Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)" target="test_code/Include/test_code.h#CustomTypes::StringType">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)" target="./test_code/src/../Include/test_code.h#CustomTypes::IntegerType">
+    <edge source="test_code/Include/test_code.h#Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)" target="test_code/Include/test_code.h#CustomTypes::IntegerType">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Entities::Person::getName()" target="./test_code/src/../Include/test_code.h#CustomTypes::StringType">
+    <edge source="test_code/Include/test_code.h#Entities::Person::getName()" target="test_code/Include/test_code.h#CustomTypes::StringType">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Entities::Person::setName(const CustomTypes::StringType &amp; newName)" target="./test_code/src/../Include/test_code.h#CustomTypes::StringType">
+    <edge source="test_code/Include/test_code.h#Entities::Person::setName(const CustomTypes::StringType &amp; newName)" target="test_code/Include/test_code.h#CustomTypes::StringType">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Entities::Person::getAge()" target="./test_code/src/../Include/test_code.h#CustomTypes::IntegerType">
+    <edge source="test_code/Include/test_code.h#Entities::Person::getAge()" target="test_code/Include/test_code.h#CustomTypes::IntegerType">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Entities::Person::setAge(CustomTypes::IntegerType newAge)" target="./test_code/src/../Include/test_code.h#CustomTypes::IntegerType">
+    <edge source="test_code/Include/test_code.h#Entities::Person::setAge(CustomTypes::IntegerType newAge)" target="test_code/Include/test_code.h#CustomTypes::IntegerType">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Entities::Company" target="./test_code/src/../Include/test_code.h#CustomTypes::StringType">
+    <edge source="test_code/Include/test_code.h#Entities::Company" target="test_code/Include/test_code.h#CustomTypes::StringType">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Entities::Company" target="./test_code/src/../Include/test_code.h#Entities::Company::Company(const CustomTypes::StringType &amp; companyName)">
+    <edge source="test_code/Include/test_code.h#Entities::Company" target="test_code/Include/test_code.h#Entities::Company::Company(const CustomTypes::StringType &amp; companyName)">
       <data key="d5">contains_constructor</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Entities::Company" target="./test_code/src/../Include/test_code.h#Entities::Company::addEmployee(const Person &amp; employee)">
+    <edge source="test_code/Include/test_code.h#Entities::Company" target="test_code/Include/test_code.h#Entities::Company::addEmployee(const Person &amp; employee)">
       <data key="d5">contains_cxx_method</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Entities::Company" target="./test_code/src/../Include/test_code.h#Entities::Company::getCompanyName()">
+    <edge source="test_code/Include/test_code.h#Entities::Company" target="test_code/Include/test_code.h#Entities::Company::getCompanyName()">
       <data key="d5">contains_cxx_method</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Entities::Company::Company(const CustomTypes::StringType &amp; companyName)" target="./test_code/src/../Include/test_code.h#CustomTypes::StringType">
+    <edge source="test_code/Include/test_code.h#Entities::Company::Company(const CustomTypes::StringType &amp; companyName)" target="test_code/Include/test_code.h#CustomTypes::StringType">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Entities::Company::addEmployee(const Person &amp; employee)" target="./test_code/src/../Include/test_code.h#Entities::Person">
+    <edge source="test_code/Include/test_code.h#Entities::Company::addEmployee(const Person &amp; employee)" target="test_code/Include/test_code.h#Entities::Person">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Entities::Company::getCompanyName()" target="./test_code/src/../Include/test_code.h#CustomTypes::StringType">
+    <edge source="test_code/Include/test_code.h#Entities::Company::getCompanyName()" target="test_code/Include/test_code.h#CustomTypes::StringType">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Actions" target="./test_code/src/../Include/test_code.h#Actions::displayPersonInfo(const Entities::Person &amp; person)">
+    <edge source="test_code/Include/test_code.h#Actions" target="test_code/Include/test_code.h#Actions::displayPersonInfo(const Entities::Person &amp; person)">
       <data key="d5">contains_function_decl</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Actions" target="./test_code/src/../Include/test_code.h#Actions::displayCompanyInfo(const Entities::Company &amp; company)">
+    <edge source="test_code/Include/test_code.h#Actions" target="test_code/Include/test_code.h#Actions::displayCompanyInfo(const Entities::Company &amp; company)">
       <data key="d5">contains_function_decl</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Actions::displayPersonInfo(const Entities::Person &amp; person)" target="./test_code/src/../Include/test_code.h#Entities::Person">
+    <edge source="test_code/Include/test_code.h#Actions::displayPersonInfo(const Entities::Person &amp; person)" target="test_code/Include/test_code.h#Entities::Person">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/../Include/test_code.h#Actions::displayCompanyInfo(const Entities::Company &amp; company)" target="./test_code/src/../Include/test_code.h#Entities::Company">
+    <edge source="test_code/Include/test_code.h#Actions::displayCompanyInfo(const Entities::Company &amp; company)" target="test_code/Include/test_code.h#Entities::Company">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities" target="./test_code/src/test_code.cpp#Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)">
+    <edge source="test_code/src/test_code.cpp#Entities" target="test_code/src/test_code.cpp#Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)">
       <data key="d5">contains_constructor</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities" target="./test_code/src/test_code.cpp#Entities::Person::getName()">
+    <edge source="test_code/src/test_code.cpp#Entities" target="test_code/src/test_code.cpp#Entities::Person::getName()">
       <data key="d5">contains_cxx_method</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities" target="./test_code/src/test_code.cpp#Entities::Person::setName(const CustomTypes::StringType &amp; newName)">
+    <edge source="test_code/src/test_code.cpp#Entities" target="test_code/src/test_code.cpp#Entities::Person::setName(const CustomTypes::StringType &amp; newName)">
       <data key="d5">contains_cxx_method</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities" target="./test_code/src/test_code.cpp#Entities::Person::getAge()">
+    <edge source="test_code/src/test_code.cpp#Entities" target="test_code/src/test_code.cpp#Entities::Person::getAge()">
       <data key="d5">contains_cxx_method</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities" target="./test_code/src/test_code.cpp#Entities::Person::setAge(CustomTypes::IntegerType newAge)">
+    <edge source="test_code/src/test_code.cpp#Entities" target="test_code/src/test_code.cpp#Entities::Person::setAge(CustomTypes::IntegerType newAge)">
       <data key="d5">contains_cxx_method</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities" target="./test_code/src/test_code.cpp#Entities::Company::Company(const CustomTypes::StringType &amp; companyName)">
+    <edge source="test_code/src/test_code.cpp#Entities" target="test_code/src/test_code.cpp#Entities::Company::Company(const CustomTypes::StringType &amp; companyName)">
       <data key="d5">contains_constructor</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities" target="./test_code/src/test_code.cpp#Entities::Company::addEmployee(const Person &amp; employee)">
+    <edge source="test_code/src/test_code.cpp#Entities" target="test_code/src/test_code.cpp#Entities::Company::addEmployee(const Person &amp; employee)">
       <data key="d5">contains_cxx_method</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities" target="./test_code/src/test_code.cpp#Entities::Company::getCompanyName()">
+    <edge source="test_code/src/test_code.cpp#Entities" target="test_code/src/test_code.cpp#Entities::Company::getCompanyName()">
       <data key="d5">contains_cxx_method</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)" target="./test_code/src/../Include/test_code.h#Entities::Person">
+    <edge source="test_code/src/test_code.cpp#Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)" target="test_code/Include/test_code.h#Entities::Person">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)" target="./test_code/src/../Include/test_code.h#CustomTypes::StringType">
+    <edge source="test_code/src/test_code.cpp#Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)" target="test_code/Include/test_code.h#CustomTypes::StringType">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)" target="./test_code/src/../Include/test_code.h#CustomTypes::IntegerType">
+    <edge source="test_code/src/test_code.cpp#Entities::Person::Person(const CustomTypes::StringType &amp; name, CustomTypes::IntegerType age)" target="test_code/Include/test_code.h#CustomTypes::IntegerType">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities::Person::getName()" target="./test_code/src/../Include/test_code.h#CustomTypes::StringType">
+    <edge source="test_code/src/test_code.cpp#Entities::Person::getName()" target="test_code/Include/test_code.h#CustomTypes::StringType">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities::Person::getName()" target="./test_code/src/../Include/test_code.h#Entities::Person">
+    <edge source="test_code/src/test_code.cpp#Entities::Person::getName()" target="test_code/Include/test_code.h#Entities::Person">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities::Person::setName(const CustomTypes::StringType &amp; newName)" target="./test_code/src/../Include/test_code.h#Entities::Person">
+    <edge source="test_code/src/test_code.cpp#Entities::Person::setName(const CustomTypes::StringType &amp; newName)" target="test_code/Include/test_code.h#Entities::Person">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities::Person::setName(const CustomTypes::StringType &amp; newName)" target="./test_code/src/../Include/test_code.h#CustomTypes::StringType">
+    <edge source="test_code/src/test_code.cpp#Entities::Person::setName(const CustomTypes::StringType &amp; newName)" target="test_code/Include/test_code.h#CustomTypes::StringType">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities::Person::getAge()" target="./test_code/src/../Include/test_code.h#CustomTypes::IntegerType">
+    <edge source="test_code/src/test_code.cpp#Entities::Person::getAge()" target="test_code/Include/test_code.h#CustomTypes::IntegerType">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities::Person::getAge()" target="./test_code/src/../Include/test_code.h#Entities::Person">
+    <edge source="test_code/src/test_code.cpp#Entities::Person::getAge()" target="test_code/Include/test_code.h#Entities::Person">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities::Person::setAge(CustomTypes::IntegerType newAge)" target="./test_code/src/../Include/test_code.h#Entities::Person">
+    <edge source="test_code/src/test_code.cpp#Entities::Person::setAge(CustomTypes::IntegerType newAge)" target="test_code/Include/test_code.h#Entities::Person">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities::Person::setAge(CustomTypes::IntegerType newAge)" target="./test_code/src/../Include/test_code.h#CustomTypes::IntegerType">
+    <edge source="test_code/src/test_code.cpp#Entities::Person::setAge(CustomTypes::IntegerType newAge)" target="test_code/Include/test_code.h#CustomTypes::IntegerType">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities::Company::Company(const CustomTypes::StringType &amp; companyName)" target="./test_code/src/../Include/test_code.h#Entities::Company">
+    <edge source="test_code/src/test_code.cpp#Entities::Company::Company(const CustomTypes::StringType &amp; companyName)" target="test_code/Include/test_code.h#Entities::Company">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities::Company::Company(const CustomTypes::StringType &amp; companyName)" target="./test_code/src/../Include/test_code.h#CustomTypes::StringType">
+    <edge source="test_code/src/test_code.cpp#Entities::Company::Company(const CustomTypes::StringType &amp; companyName)" target="test_code/Include/test_code.h#CustomTypes::StringType">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities::Company::addEmployee(const Person &amp; employee)" target="./test_code/src/../Include/test_code.h#Entities::Company">
+    <edge source="test_code/src/test_code.cpp#Entities::Company::addEmployee(const Person &amp; employee)" target="test_code/Include/test_code.h#Entities::Company">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities::Company::addEmployee(const Person &amp; employee)" target="./test_code/src/../Include/test_code.h#Entities::Person">
+    <edge source="test_code/src/test_code.cpp#Entities::Company::addEmployee(const Person &amp; employee)" target="test_code/Include/test_code.h#Entities::Person">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities::Company::getCompanyName()" target="./test_code/src/../Include/test_code.h#CustomTypes::StringType">
+    <edge source="test_code/src/test_code.cpp#Entities::Company::getCompanyName()" target="test_code/Include/test_code.h#CustomTypes::StringType">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Entities::Company::getCompanyName()" target="./test_code/src/../Include/test_code.h#Entities::Company">
+    <edge source="test_code/src/test_code.cpp#Entities::Company::getCompanyName()" target="test_code/Include/test_code.h#Entities::Company">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Actions" target="./test_code/src/test_code.cpp#Actions::displayPersonInfo(const Entities::Person &amp; person)">
+    <edge source="test_code/src/test_code.cpp#Actions" target="test_code/src/test_code.cpp#Actions::displayPersonInfo(const Entities::Person &amp; person)">
       <data key="d5">contains_function_decl</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Actions" target="./test_code/src/test_code.cpp#Actions::displayCompanyInfo(const Entities::Company &amp; company)">
+    <edge source="test_code/src/test_code.cpp#Actions" target="test_code/src/test_code.cpp#Actions::displayCompanyInfo(const Entities::Company &amp; company)">
       <data key="d5">contains_function_decl</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Actions::displayPersonInfo(const Entities::Person &amp; person)" target="./test_code/src/../Include/test_code.h#Entities::Person">
+    <edge source="test_code/src/test_code.cpp#Actions::displayPersonInfo(const Entities::Person &amp; person)" target="test_code/Include/test_code.h#Entities::Person">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Actions::displayPersonInfo(const Entities::Person &amp; person)" target="./test_code/src/test_code.cpp#">
+    <edge source="test_code/src/test_code.cpp#Actions::displayPersonInfo(const Entities::Person &amp; person)" target="test_code/src/test_code.cpp#">
       <data key="d5">calls_function</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Actions::displayPersonInfo(const Entities::Person &amp; person)" target="./test_code/src/test_code.cpp#Entities::Person::getAge">
+    <edge source="test_code/src/test_code.cpp#Actions::displayPersonInfo(const Entities::Person &amp; person)" target="test_code/src/test_code.cpp#Entities::Person::getAge">
       <data key="d5">calls_function</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Actions::displayCompanyInfo(const Entities::Company &amp; company)" target="./test_code/src/../Include/test_code.h#Entities::Company">
+    <edge source="test_code/src/test_code.cpp#Actions::displayCompanyInfo(const Entities::Company &amp; company)" target="test_code/Include/test_code.h#Entities::Company">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#Actions::displayCompanyInfo(const Entities::Company &amp; company)" target="./test_code/src/test_code.cpp#">
+    <edge source="test_code/src/test_code.cpp#Actions::displayCompanyInfo(const Entities::Company &amp; company)" target="test_code/src/test_code.cpp#">
       <data key="d5">calls_function</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#main()" target="./test_code/src/../Include/test_code.h#Entities::Person">
+    <edge source="test_code/src/test_code.cpp#main()" target="test_code/Include/test_code.h#Entities::Person">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#main()" target="./test_code/src/../Include/test_code.h#Entities::Company">
+    <edge source="test_code/src/test_code.cpp#main()" target="test_code/Include/test_code.h#Entities::Company">
       <data key="d5">uses_custom_type</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#main()" target="./test_code/src/test_code.cpp#Entities::Company::addEmployee">
+    <edge source="test_code/src/test_code.cpp#main()" target="test_code/src/test_code.cpp#Entities::Company::addEmployee">
       <data key="d5">calls_function</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#main()" target="./test_code/src/test_code.cpp#Actions::displayPersonInfo">
+    <edge source="test_code/src/test_code.cpp#main()" target="test_code/src/test_code.cpp#Actions::displayPersonInfo">
       <data key="d5">calls_function</data>
     </edge>
-    <edge source="./test_code/src/test_code.cpp#main()" target="./test_code/src/test_code.cpp#Actions::displayCompanyInfo">
+    <edge source="test_code/src/test_code.cpp#main()" target="test_code/src/test_code.cpp#Actions::displayCompanyInfo">
       <data key="d5">calls_function</data>
     </edge>
   </graph>

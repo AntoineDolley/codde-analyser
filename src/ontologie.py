@@ -3,6 +3,7 @@ from dataclasses import dataclass, field
 import networkx as nx
 from typing import Optional
 import clang.cindex
+import os
 
 @dataclass
 class Entity:
@@ -25,7 +26,7 @@ class Entity:
         file = node.location.file
 
         if file :
-            self.decl_file = file.name
+            self.decl_file = os.path.normpath(file.name)
         elif self.decl_file_row == 0 and (file is None) : 
             # En general quand le file n'est par trouvé c'est prsq le node est le root du fichier
             self.decl_file = node.spelling
