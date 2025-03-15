@@ -1,4 +1,6 @@
+# ast_parser.py
 import clang.cindex
+import logging
 
 def parse_source(source_path: str, include_paths, library_paths) -> clang.cindex.TranslationUnit:
     """
@@ -12,7 +14,7 @@ def parse_source(source_path: str, include_paths, library_paths) -> clang.cindex
 
     args = includes + libraries
 
-    print(f"args{args}")
+    logging.debug(f"args={args}")
 
     index = clang.cindex.Index.create()
     translation_unit = index.parse(source_path, args = args)

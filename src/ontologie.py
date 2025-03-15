@@ -1,3 +1,4 @@
+# ontologie.py
 from dataclasses import dataclass, field
 import networkx as nx
 from typing import Optional
@@ -124,7 +125,9 @@ class FunctionCallEntity(Entity):
         if node.referenced: 
             new_node = node.referenced.get_definition()
             if new_node is None:
-                node = node
+                new_node = node.referenced.get_declaration()
+                if new_node is None:
+                    node = node
             else : 
                 node = new_node
 
@@ -132,5 +135,25 @@ class FunctionCallEntity(Entity):
         super().__init__(node)
         # On remplace le nom par la signature complète
         self.name = signature
+        self.namespace_position = self._build_namespace_position(node)
+        self.name = f"{self.decl_file}#{self.namespace_position}"
+
+@dataclass
+class TypeRefEntity(Entity):
+    def __init__(self, node: clang.cindex.Cursor):
+        # On calcule la signature complète avant d'initialiser le reste
+
+        if node.referenced: 
+            new_node = node.referenced.get_definition()
+            if new_node is None:
+                new_node = node.referenced.get_declaration()
+                if new_node is None:
+                    node = node
+            else : 
+                node = new_node
+
+        # Appel à l'initialisation de la classe parente pour récupérer les autres attributs
+        super().__init__(node)
+        # On remplace le nom par la signature complète
         self.namespace_position = self._build_namespace_position(node)
         self.name = f"{self.decl_file}#{self.namespace_position}"

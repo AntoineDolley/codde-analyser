@@ -1,5 +1,8 @@
+# main.py
 import argparse
 import clang.cindex
+import logging
+from debug_util import setup_logging
 from utils import setup_for_os
 from ast_parser import parse_source, get_root_cursor
 from graph_builder import build_graph_from_ast
@@ -13,22 +16,30 @@ def main():
     parser.add_argument('--includes', nargs='+', default=[], help="Les includes nécessaires à la compilation du fichier")
     args = parser.parse_args()
 
+    setup_logging()  # Initialisation du logging en mode DEBUG
+    logging.debug("Démarrage du programme en mode DEBUG")
+
     #library_paths = setup_for_os()
 
     library_paths = []
 
-    tu = parse_source(args.source, args.source, library_paths)
+    ALLOWED_PATHS = args.includes.copy()
+    ALLOWED_PATHS.append(args.source) 
+
+    logging.debug(f"ALLOWED_PATHS={ALLOWED_PATHS}")
+
+    tu = parse_source(args.source, args.includes, library_paths)
 
     root = get_root_cursor(tu)
 
-    graph = build_graph_from_ast(root)
+    graph = build_graph_from_ast(root, ALLOWED_PATHS)
 
     if args.export == 'gml':
         export_to_gml(graph, args.output + ".gml")
     else:
         export_to_graphml(graph, args.output + ".graphml")
 
-    print(f"Export effectué vers {args.output}.{args.export}")
+    logging.debug(f"Export effectué vers {args.output}.{args.export}")
 
 if __name__ == "__main__":
     main()
