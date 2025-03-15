@@ -18,7 +18,7 @@ class Entity:
         """
 
         # Extraction des informations de localisation
-        self.decl_file_row = node.location.line
+        self.decl_file_row = node.location.line if node.location else "Decl file non trouvée"
         self.decl_file_column = node.location.column
 
         file = node.location.file
@@ -122,7 +122,11 @@ class FunctionCallEntity(Entity):
         signature = get_function_signature(node)
 
         if node.referenced: 
-            node = node.referenced.get_definition()
+            new_node = node.referenced.get_definition()
+            if new_node is None:
+                node = node
+            else : 
+                node = new_node
 
         # Appel à l'initialisation de la classe parente pour récupérer les autres attributs
         super().__init__(node)

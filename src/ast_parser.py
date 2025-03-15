@@ -6,7 +6,9 @@ def parse_source(source_path: str, include_paths, library_paths) -> clang.cindex
     """
     includes = ['-I' + path for path in include_paths]
 
-    libraries = ['-l' + lib for lib in library_paths]
+    #libraries = ['-l' + lib for lib in library_paths]
+
+    libraries = ["-std=c++11"]
 
     args = includes + libraries
 
