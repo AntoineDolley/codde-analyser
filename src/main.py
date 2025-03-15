@@ -10,18 +10,14 @@ def main():
     parser.add_argument('--source', required=True, help="Chemin vers le fichier source à analyser")
     parser.add_argument('--export', choices=['gml', 'graphml'], default='graphml', help="Format d'export")
     parser.add_argument('--output', default="graph_output", help="Nom de base du fichier de sortie (sans extension)")
-    parser.add_argument('--includes', default=[], help="Les includes nécessaires a la compilation du fihicer")
+    parser.add_argument('--includes', nargs='+', default=[], help="Les includes nécessaires à la compilation du fichier")
     args = parser.parse_args()
-
-    print(args.includes)
 
     #library_paths = setup_for_os()
 
     library_paths = []
 
-    include_paths = [args.includes]
-
-    tu = parse_source(args.source, include_paths, library_paths)
+    tu = parse_source(args.source, args.source, library_paths)
 
     root = get_root_cursor(tu)
 
