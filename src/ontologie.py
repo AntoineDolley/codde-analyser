@@ -20,7 +20,7 @@ class Entity:
 
         # Extraction des informations de localisation
         self.decl_file_row = node.location.line if node.location else "Decl file non trouvée"
-        self.decl_file_column = node.location.column
+        self.decl_file_column = node.location.column if node.location else "Decl file non trouvée"
 
         file = node.location.file
 

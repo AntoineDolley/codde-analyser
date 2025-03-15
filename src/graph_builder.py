@@ -20,12 +20,6 @@ def build_hierarchy_graph(node: clang.cindex.Cursor, graph: nx.DiGraph, ALLOWED_
                 continue
 
         if is_class(child) or uses_custom_type(child) or is_function(child) or is_namespace(child) or is_struct(child) or is_custom_type(child) or is_function_call(child):
-
-            if uses_custom_type(child):
-                print(child.kind)
-                print(child.spelling)
-                print_function_location(child)
-
             if is_function(child): 
                 child_entity = FunctionEntity(child)
             elif is_function_call(child):
