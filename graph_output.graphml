@@ -189,6 +189,13 @@
       <data key="d3">38</data>
       <data key="d4">Entities::Person::getAge()</data>
     </node>
+    <node id="test_code/Include/test_code.h#Entities::Person::age">
+      <data key="d0">test_code/Include/test_code.h#Entities::Person::age</data>
+      <data key="d1">test_code/Include/test_code.h</data>
+      <data key="d2">19</data>
+      <data key="d3">34</data>
+      <data key="d4">Entities::Person::age</data>
+    </node>
     <node id="test_code/src/test_code.cpp#Entities::Person::setAge(CustomTypes::IntegerType newAge)">
       <data key="d0">test_code/src/test_code.cpp#Entities::Person::setAge(CustomTypes::IntegerType newAge)</data>
       <data key="d1">test_code/src/test_code.cpp</data>
@@ -442,11 +449,17 @@
     <edge source="test_code/src/test_code.cpp#Entities::Person::getAge()" target="test_code/Include/test_code.h#Entities::Person">
       <data key="d5">uses_custom_type</data>
     </edge>
+    <edge source="test_code/src/test_code.cpp#Entities::Person::getAge()" target="test_code/Include/test_code.h#Entities::Person::age">
+      <data key="d5">calls_function</data>
+    </edge>
     <edge source="test_code/src/test_code.cpp#Entities::Person::setAge(CustomTypes::IntegerType newAge)" target="test_code/Include/test_code.h#Entities::Person">
       <data key="d5">uses_custom_type</data>
     </edge>
     <edge source="test_code/src/test_code.cpp#Entities::Person::setAge(CustomTypes::IntegerType newAge)" target="test_code/Include/test_code.h#CustomTypes::IntegerType">
       <data key="d5">uses_custom_type</data>
+    </edge>
+    <edge source="test_code/src/test_code.cpp#Entities::Person::setAge(CustomTypes::IntegerType newAge)" target="test_code/Include/test_code.h#Entities::Person::age">
+      <data key="d5">calls_function</data>
     </edge>
     <edge source="test_code/src/test_code.cpp#Entities::Company::Company(const CustomTypes::StringType &amp; companyName)" target="test_code/Include/test_code.h#Entities::Company">
       <data key="d5">uses_custom_type</data>
@@ -481,6 +494,9 @@
     <edge source="test_code/src/test_code.cpp#Actions::displayPersonInfo(const Entities::Person &amp; person)" target="test_code/src/test_code.cpp#Entities::Person::getAge">
       <data key="d5">calls_function</data>
     </edge>
+    <edge source="test_code/src/test_code.cpp#Entities::Person::getAge" target="test_code/src/test_code.cpp#Entities::Person::getAge">
+      <data key="d5">calls_function</data>
+    </edge>
     <edge source="test_code/src/test_code.cpp#Actions::displayCompanyInfo(const Entities::Company &amp; company)" target="test_code/Include/test_code.h#Entities::Company">
       <data key="d5">uses_custom_type</data>
     </edge>
@@ -500,6 +516,9 @@
       <data key="d5">calls_function</data>
     </edge>
     <edge source="test_code/src/test_code.cpp#main()" target="test_code/src/test_code.cpp#Actions::displayCompanyInfo">
+      <data key="d5">calls_function</data>
+    </edge>
+    <edge source="test_code/src/test_code.cpp#Entities::Company::addEmployee" target="test_code/src/test_code.cpp#Entities::Company::addEmployee">
       <data key="d5">calls_function</data>
     </edge>
   </graph>

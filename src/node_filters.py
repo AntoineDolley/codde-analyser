@@ -21,7 +21,7 @@ def is_custom_type(node):
     return node.kind in [clang.cindex.CursorKind.TYPE_ALIAS_DECL]
 
 def is_function_call(node):
-    return node.kind in [clang.cindex.CursorKind.CALL_EXPR]
+    return node.kind in [clang.cindex.CursorKind.CALL_EXPR,] # clang.cindex.CursorKind.MEMBER_REF_EXPR]
 
 def is_allowed_node(node, ALLOWED_PATHS):
     """
