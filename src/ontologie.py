@@ -157,4 +157,3 @@ class TypeRefEntity(Entity):
         super().__init__(node)
         # On remplace le nom par la signature complète
         self.namespace_position = self.name
-        print(f"self.namespace_position{self.namespace_position}")

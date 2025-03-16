@@ -4,6 +4,7 @@ import clang.cindex
 import logging
 from debug_util import setup_logging
 from utils import setup_for_os
+from graph_postprocessing import merge_duplicate_nodes
 from ast_parser import parse_source, get_root_cursor
 from graph_builder import build_graph_from_ast
 from exporter import export_to_gml, export_to_graphml
@@ -33,6 +34,8 @@ def main():
     root = get_root_cursor(tu)
 
     graph = build_graph_from_ast(root, ALLOWED_PATHS)
+
+    graph = merge_duplicate_nodes(graph)
 
     if args.export == 'gml':
         export_to_gml(graph, args.output + ".gml")
