@@ -14,7 +14,7 @@ def parse_source(source_path: str, include_paths, library_paths) -> clang.cindex
 
     args = includes + library_paths + std_libraries
 
-    logging.debug(f"args={args}")
+    logging.info(f"args={args}")
 
     index = clang.cindex.Index.create()
     translation_unit = index.parse(source_path, args = args)
