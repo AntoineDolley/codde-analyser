@@ -126,9 +126,12 @@ class FunctionCallEntity(Entity):
         if node.referenced: 
             new_node = node.referenced.get_definition()
             if new_node is None:
-                new_node = node.referenced.get_declaration()
-                if new_node is None:
-                    node = node
+                try :
+                    new_node = node.referenced.get_declaration()
+                    if new_node is None:
+                        node = node
+                except : 
+                    print(node.spelling)
             else : 
                 node = new_node
 
@@ -147,9 +150,12 @@ class TypeRefEntity(Entity):
         if node.referenced: 
             new_node = node.referenced.get_definition()
             if new_node is None:
-                new_node = node.referenced.get_declaration()
-                if new_node is None:
-                    node = node
+                try :
+                    new_node = node.referenced.get_declaration()
+                    if new_node is None:
+                        node = node
+                except : 
+                    print(node.spelling)
             else : 
                 node = new_node
 
