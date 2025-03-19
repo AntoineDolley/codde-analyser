@@ -15,21 +15,21 @@ def main():
     parser.add_argument('--export', choices=['gml', 'graphml'], default='graphml', help="Format d'export")
     parser.add_argument('--output', default="graph_output", help="Nom de base du fichier de sortie (sans extension)")
     parser.add_argument('--includes', nargs='+', default=[], help="Les includes nécessaires à la compilation du fichier")
+    parser.add_argument('--libraries', nargs='+', default=[], help="Les librairies nécessaires à la compilation du fichier")
     args = parser.parse_args()
 
     setup_logging()  # Initialisation du logging en mode DEBUG
     logging.debug("Démarrage du programme en mode DEBUG")
 
-    #library_paths = setup_for_os()
-
-    library_paths = []
+    libclang_path = "/usr/lib64/libclang.so.18.1.8"
+    clang.cindex.Config.set_library_file(libclang_path)
 
     ALLOWED_PATHS = args.includes.copy()
     ALLOWED_PATHS.append(args.source) 
 
     logging.debug(f"ALLOWED_PATHS={ALLOWED_PATHS}")
 
-    tu = parse_source(args.source, args.includes, library_paths)
+    tu = parse_source(args.source, args.includes, args.libraries)
 
     root = get_root_cursor(tu)
 
