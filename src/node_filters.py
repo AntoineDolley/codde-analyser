@@ -23,24 +23,41 @@ def is_custom_type(node):
 def is_function_call(node):
     return node.kind in [clang.cindex.CursorKind.CALL_EXPR,] # clang.cindex.CursorKind.MEMBER_REF_EXPR]
 
+import os
+
 def is_allowed_node(node, ALLOWED_PATHS):
     """
     Retourne True si le nœud appartient à l'un des fichiers autorisés.
     Si le nœud n'a pas de localisation (par exemple la racine), on le considère autorisé.
     Pour plus de flexibilité, si le basename (nom du fichier) du nœud correspond à celui
     d'un chemin autorisé, on accepte également.
+    Si le nœud appartient à un fichier d'en-tête, il est autorisé si le fichier source
+    correspondant est autorisé.
     """
     if node.location and node.location.file:
         # Normalisation du chemin absolu du fichier du nœud
         file_path = os.path.normpath(os.path.abspath(node.location.file.name))
+        base_name = os.path.basename(file_path)
         for allowed in ALLOWED_PATHS:
             # Normalisation du chemin absolu autorisé
             allowed_abs = os.path.normpath(os.path.abspath(allowed))
-            # Option stricte : le chemin complet correspond ou est dans le même répertoire
+            allowed_base_name = os.path.basename(allowed_abs)
+            # Option stricte : le chemin complet correspond ou est dans le même répertoire
             if file_path == allowed_abs or file_path.startswith(os.path.dirname(allowed_abs)):
                 return True
-            # Option plus flexible : le nom du fichier correspond (pour gérer les cas src/../Include)
-            if os.path.basename(file_path) == os.path.basename(allowed_abs):
+            # Option plus flexible : le nom du fichier correspond (pour gérer les cas src/../Include)
+            if base_name == allowed_base_name:
                 return True
+            # Vérification du fichier source correspondant pour les fichiers d'en-tête
+            if file_path.endswith('.h'):
+                corresponding_source = file_path.replace('.h', '.cpp')
+                corresponding_source_base_name = os.path.basename(corresponding_source)
+                if corresponding_source_base_name == allowed_base_name:
+                    return True
+                # Option pour d'autres extensions de fichiers source
+                corresponding_source = file_path.replace('.h', '.c')
+                corresponding_source_base_name = os.path.basename(corresponding_source)
+                if corresponding_source_base_name == allowed_base_name:
+                    return True
         return False
     return True
