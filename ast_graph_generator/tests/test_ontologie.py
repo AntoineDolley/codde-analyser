@@ -1,7 +1,7 @@
 import os
 import unittest
 import clang.cindex
-from src.ontologie import Entity, FunctionEntity
+from ast_graph_generator.ontologie import Entity, FunctionEntity
 
 # Optionnel : ajustez le chemin vers votre libclang si nécessaire
 # clang.cindex.Config.set_library_file('/usr/lib/llvm-10/lib/libclang.so.1')

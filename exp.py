@@ -1,7 +1,7 @@
 import os
 import subprocess
 import clang
-from graph_generator.lib import create_ast_graph_from_file
+from ast_graph_generator.lib import create_ast_graph_from_file
 
 def find_cpp_cxx_files(directory):
     # Liste pour stocker les chemins des fichiers trouvés

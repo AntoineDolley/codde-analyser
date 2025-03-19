@@ -1,8 +1,8 @@
 import os
 import unittest
 import clang.cindex
-from src.ast_parser import parse_source, get_root_cursor
-from src.node_filters import is_class, is_struct, is_function, is_namespace, is_custom_type
+from ast_graph_generator.ast_parser import parse_source, get_root_cursor
+from ast_graph_generator.node_filters import is_class, is_struct, is_function, is_namespace, is_custom_type
 
 # Si nécessaire, configurer le chemin de la librairie clang (adaptez le chemin à votre environnement)
 # clang.cindex.Config.set_library_file('/usr/lib/llvm-10/lib/libclang.so.1')
