@@ -1,0 +1,19 @@
+Import('env')
+print("************************************* [Building SConsEx/packages/numerics]")
+
+import os
+
+# Setup environment/settings
+
+env['CPPPATH'] = ['../../packages']
+
+# Base source files
+
+SourceFiles = [
+   'constants.cpp',
+   'linear_funcs.cpp'
+]
+
+env.SharedLibrary('#/lib/SConsEx_numerics',SourceFiles)
+
+

@@ -1,0 +1,38 @@
+[
+    {
+        "command": "g++ -o packages/core/string_funcs.os -c -fPIC -I/home/antoine/Documents/packages packages/core/string_funcs.cpp",
+        "directory": "/home/antoine/Documents/codde-analyser/SConsEx-master",
+        "file": "packages/core/string_funcs.cpp",
+        "output": "packages/core/string_funcs.os"
+    },
+    {
+        "command": "g++ -o packages/core/file_funcs_linux.os -c -fPIC -I/home/antoine/Documents/packages packages/core/file_funcs_linux.cpp",
+        "directory": "/home/antoine/Documents/codde-analyser/SConsEx-master",
+        "file": "packages/core/file_funcs_linux.cpp",
+        "output": "packages/core/file_funcs_linux.os"
+    },
+    {
+        "command": "g++ -o packages/numerics/constants.os -c -fPIC -I/home/antoine/Documents/packages packages/numerics/constants.cpp",
+        "directory": "/home/antoine/Documents/codde-analyser/SConsEx-master",
+        "file": "packages/numerics/constants.cpp",
+        "output": "packages/numerics/constants.os"
+    },
+    {
+        "command": "g++ -o packages/numerics/linear_funcs.os -c -fPIC -I/home/antoine/Documents/packages packages/numerics/linear_funcs.cpp",
+        "directory": "/home/antoine/Documents/codde-analyser/SConsEx-master",
+        "file": "packages/numerics/linear_funcs.cpp",
+        "output": "packages/numerics/linear_funcs.os"
+    },
+    {
+        "command": "g++ -o testing/core_tests/main.o -c -I/home/antoine/Documents/packages testing/core_tests/main.cpp",
+        "directory": "/home/antoine/Documents/codde-analyser/SConsEx-master",
+        "file": "testing/core_tests/main.cpp",
+        "output": "testing/core_tests/main.o"
+    },
+    {
+        "command": "g++ -o testing/numerics_tests/main.o -c -I/home/antoine/Documents/packages testing/numerics_tests/main.cpp",
+        "directory": "/home/antoine/Documents/codde-analyser/SConsEx-master",
+        "file": "testing/numerics_tests/main.cpp",
+        "output": "testing/numerics_tests/main.o"
+    }
+]

@@ -1,0 +1,14 @@
+import os
+
+Import('env')
+
+print("************************************* [Building SConsEx/testing]")
+
+# Ordered build ...
+SubDirs = [
+   'core_tests',
+   'numerics_tests'
+]
+
+for subDir in SubDirs:
+    SConscript(os.path.join(subDir, 'SConscript'), exports = ['env'])
