@@ -1,8 +1,8 @@
 # graph_builder.py
 import networkx as nx
 import clang.cindex
-from ontologie import Entity, FunctionEntity,FunctionCallEntity, TypeRefEntity
-from node_filters import is_class,  uses_custom_type, is_function, is_namespace, is_struct, is_custom_type, is_function_call, is_allowed_node
+from .ontologie import Entity, FunctionEntity, FunctionCallEntity, TypeRefEntity
+from .node_filters import is_class,  uses_custom_type, is_function, is_namespace, is_struct, is_custom_type, is_function_call, is_allowed_node
 
 def build_hierarchy_graph(node: clang.cindex.Cursor, graph: nx.DiGraph, ALLOWED_PATHS: list[str], parent_node: str = None) -> None:
     """
