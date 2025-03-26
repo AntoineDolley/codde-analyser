@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d6" for="edge" attr.name="relation" attr.type="string" />
+  <key id="d5" for="node" attr.name="node_type" attr.type="string" />
+  <key id="d4" for="node" attr.name="namespace_position" attr.type="string" />
+  <key id="d3" for="node" attr.name="declaration_file_column" attr.type="long" />
+  <key id="d2" for="node" attr.name="declaration_file_row" attr.type="long" />
+  <key id="d1" for="node" attr.name="declaration_file" attr.type="string" />
+  <key id="d0" for="node" attr.name="label" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="../sep_test/Actions.cpp#sep_test/Actions.cpp">
+      <data key="d0">../sep_test/Actions.cpp#sep_test/Actions.cpp</data>
+      <data key="d1">../sep_test/Actions.cpp</data>
+      <data key="d2">0</data>
+      <data key="d3">0</data>
+      <data key="d4">sep_test/Actions.cpp</data>
+      <data key="d5">translation_unit</data>
+    </node>
+    <node id="../sep_test/Actions.h#Actions">
+      <data key="d0">../sep_test/Actions.h#Actions</data>
+      <data key="d1">../sep_test/Actions.h</data>
+      <data key="d2">6</data>
+      <data key="d3">11</data>
+      <data key="d4">Actions</data>
+      <data key="d5">namespace</data>
+    </node>
+    <node id="../sep_test/Actions.h#Actions::displayPersonInfo(const Entities::Person &amp; person)">
+      <data key="d0">../sep_test/Actions.h#Actions::displayPersonInfo(const Entities::Person &amp; person)</data>
+      <data key="d1">../sep_test/Actions.h</data>
+      <data key="d2">7</data>
+      <data key="d3">10</data>
+      <data key="d4">Actions::displayPersonInfo(const Entities::Person &amp; person)</data>
+      <data key="d5">function_decl</data>
+    </node>
+    <node id="../sep_test/Entities.h#Entities::Person">
+      <data key="d0">../sep_test/Entities.h#Entities::Person</data>
+      <data key="d1">../sep_test/Entities.h</data>
+      <data key="d2">9</data>
+      <data key="d3">11</data>
+      <data key="d4">../sep_test/Entities.h#Entities::Person</data>
+      <data key="d5">type_ref</data>
+    </node>
+    <node id="../sep_test/Actions.h#Actions::displayCompanyInfo(const Entities::Company &amp; company)">
+      <data key="d0">../sep_test/Actions.h#Actions::displayCompanyInfo(const Entities::Company &amp; company)</data>
+      <data key="d1">../sep_test/Actions.h</data>
+      <data key="d2">8</data>
+      <data key="d3">10</data>
+      <data key="d4">Actions::displayCompanyInfo(const Entities::Company &amp; company)</data>
+      <data key="d5">function_decl</data>
+    </node>
+    <node id="../sep_test/Entities.h#Entities::Company">
+      <data key="d0">../sep_test/Entities.h#Entities::Company</data>
+      <data key="d1">../sep_test/Entities.h</data>
+      <data key="d2">25</data>
+      <data key="d3">11</data>
+      <data key="d4">../sep_test/Entities.h#Entities::Company</data>
+      <data key="d5">type_ref</data>
+    </node>
+    <node id="../sep_test/Actions.h#Actions::displayEmployeeInfo(const Entities::Company &amp; company, CustomTypes::SizeType employeeIndex)">
+      <data key="d0">../sep_test/Actions.h#Actions::displayEmployeeInfo(const Entities::Company &amp; company, CustomTypes::SizeType employeeIndex)</data>
+      <data key="d1">../sep_test/Actions.h</data>
+      <data key="d2">9</data>
+      <data key="d3">10</data>
+      <data key="d4">Actions::displayEmployeeInfo(const Entities::Company &amp; company, CustomTypes::SizeType employeeIndex)</data>
+      <data key="d5">function_decl</data>
+    </node>
+    <node id="../sep_test/CustomTypes.h#CustomTypes::SizeType">
+      <data key="d0">../sep_test/CustomTypes.h#CustomTypes::SizeType</data>
+      <data key="d1">../sep_test/CustomTypes.h</data>
+      <data key="d2">9</data>
+      <data key="d3">11</data>
+      <data key="d4">../sep_test/CustomTypes.h#CustomTypes::SizeType</data>
+      <data key="d5">type_ref</data>
+    </node>
+    <node id="../sep_test/Actions.h#Actions::initializeAndDisplayPersonInfo(const Entities::Person &amp; original)">
+      <data key="d0">../sep_test/Actions.h#Actions::initializeAndDisplayPersonInfo(const Entities::Person &amp; original)</data>
+      <data key="d1">../sep_test/Actions.h</data>
+      <data key="d2">10</data>
+      <data key="d3">10</data>
+      <data key="d4">Actions::initializeAndDisplayPersonInfo(const Entities::Person &amp; original)</data>
+      <data key="d5">function_decl</data>
+    </node>
+    <node id="/include/c++/13/ostream#std::basic_ostream::operator&lt;&lt;">
+      <data key="d0">/include/c++/13/ostream#std::basic_ostream::operator&lt;&lt;</data>
+      <data key="d1">/include/c++/13/ostream</data>
+      <data key="d2">110</data>
+      <data key="d3">7</data>
+      <data key="d4">std::basic_ostream::operator&lt;&lt;</data>
+      <data key="d5">call_expr</data>
+    </node>
+    <node id="../sep_test/Actions.cpp#operator&lt;&lt;">
+      <data key="d0">../sep_test/Actions.cpp#operator&lt;&lt;</data>
+      <data key="d1">../sep_test/Actions.cpp</data>
+      <data key="d2">7</data>
+      <data key="d3">9</data>
+      <data key="d4">operator&lt;&lt;</data>
+      <data key="d5">call_expr</data>
+    </node>
+    <node id="/include/c++/13/ostream#std::operator&lt;&lt;">
+      <data key="d0">/include/c++/13/ostream#std::operator&lt;&lt;</data>
+      <data key="d1">/include/c++/13/ostream</data>
+      <data key="d2">662</data>
+      <data key="d3">5</data>
+      <data key="d4">std::operator&lt;&lt;</data>
+      <data key="d5">call_expr</data>
+    </node>
+    <node id="../sep_test/Entities.h#getName">
+      <data key="d0">../sep_test/Entities.h#getName</data>
+      <data key="d1">../sep_test/Entities.h</data>
+      <data key="d2">9</data>
+      <data key="d3">11</data>
+      <data key="d4">getName</data>
+      <data key="d5">call_expr</data>
+    </node>
+    <node id="../sep_test/Entities.h#getAge">
+      <data key="d0">../sep_test/Entities.h#getAge</data>
+      <data key="d1">../sep_test/Entities.h</data>
+      <data key="d2">9</data>
+      <data key="d3">11</data>
+      <data key="d4">getAge</data>
+      <data key="d5">call_expr</data>
+    </node>
+    <node id="../sep_test/Entities.h#getCompanyName">
+      <data key="d0">../sep_test/Entities.h#getCompanyName</data>
+      <data key="d1">../sep_test/Entities.h</data>
+      <data key="d2">25</data>
+      <data key="d3">11</data>
+      <data key="d4">getCompanyName</data>
+      <data key="d5">call_expr</data>
+    </node>
+    <node id="../sep_test/Actions.cpp#">
+      <data key="d0">../sep_test/Actions.cpp#</data>
+      <data key="d1">../sep_test/Actions.cpp</data>
+      <data key="d2">18</data>
+      <data key="d3">38</data>
+      <data key="d4" />
+      <data key="d5">call_expr</data>
+    </node>
+    <node id="../sep_test/Actions.cpp#Person">
+      <data key="d0">../sep_test/Actions.cpp#Person</data>
+      <data key="d1">../sep_test/Actions.cpp</data>
+      <data key="d2">18</data>
+      <data key="d3">38</data>
+      <data key="d4">Person</data>
+      <data key="d5">call_expr</data>
+    </node>
+    <node id="/include/c++/13/bits/basic_string.h#std::__cxx11::basic_string::basic_string">
+      <data key="d0">/include/c++/13/bits/basic_string.h#std::__cxx11::basic_string::basic_string</data>
+      <data key="d1">/include/c++/13/bits/basic_string.h</data>
+      <data key="d2">641</data>
+      <data key="d3">7</data>
+      <data key="d4">std::__cxx11::basic_string::basic_string</data>
+      <data key="d5">call_expr</data>
+    </node>
+    <node id="../sep_test/Entities.h#setFrom">
+      <data key="d0">../sep_test/Entities.h#setFrom</data>
+      <data key="d1">../sep_test/Entities.h</data>
+      <data key="d2">9</data>
+      <data key="d3">11</data>
+      <data key="d4">setFrom</data>
+      <data key="d5">call_expr</data>
+    </node>
+    <node id="../sep_test/Actions.cpp#Actions::displayPersonInfo">
+      <data key="d0">../sep_test/Actions.cpp#Actions::displayPersonInfo</data>
+      <data key="d1">../sep_test/Actions.cpp</data>
+      <data key="d2">6</data>
+      <data key="d3">10</data>
+      <data key="d4">Actions::displayPersonInfo</data>
+      <data key="d5">call_expr</data>
+    </node>
+    <edge source="../sep_test/Actions.cpp#sep_test/Actions.cpp" target="../sep_test/Actions.h#Actions">
+      <data key="d6">contains_namespace_decl</data>
+    </edge>
+    <edge source="../sep_test/Actions.h#Actions" target="../sep_test/Actions.h#Actions::displayPersonInfo(const Entities::Person &amp; person)">
+      <data key="d6">contains_fun_decl</data>
+    </edge>
+    <edge source="../sep_test/Actions.h#Actions" target="../sep_test/Actions.h#Actions::displayCompanyInfo(const Entities::Company &amp; company)">
+      <data key="d6">contains_fun_decl</data>
+    </edge>
+    <edge source="../sep_test/Actions.h#Actions" target="../sep_test/Actions.h#Actions::displayEmployeeInfo(const Entities::Company &amp; company, CustomTypes::SizeType employeeIndex)">
+      <data key="d6">contains_fun_decl</data>
+    </edge>
+    <edge source="../sep_test/Actions.h#Actions" target="../sep_test/Actions.h#Actions::initializeAndDisplayPersonInfo(const Entities::Person &amp; original)">
+      <data key="d6">contains_fun_decl</data>
+    </edge>
+    <edge source="../sep_test/Actions.h#Actions::displayPersonInfo(const Entities::Person &amp; person)" target="../sep_test/Entities.h#Entities::Person">
+      <data key="d6">uses_custom_type</data>
+    </edge>
+    <edge source="../sep_test/Actions.h#Actions::displayPersonInfo(const Entities::Person &amp; person)" target="/include/c++/13/ostream#std::basic_ostream::operator&lt;&lt;">
+      <data key="d6">calls_function</data>
+    </edge>
+    <edge source="../sep_test/Actions.h#Actions::displayPersonInfo(const Entities::Person &amp; person)" target="../sep_test/Actions.cpp#operator&lt;&lt;">
+      <data key="d6">calls_function</data>
+    </edge>
+    <edge source="../sep_test/Actions.h#Actions::displayPersonInfo(const Entities::Person &amp; person)" target="/include/c++/13/ostream#std::operator&lt;&lt;">
+      <data key="d6">calls_function</data>
+    </edge>
+    <edge source="../sep_test/Actions.h#Actions::displayPersonInfo(const Entities::Person &amp; person)" target="../sep_test/Entities.h#getName">
+      <data key="d6">contains_call_expr</data>
+    </edge>
+    <edge source="../sep_test/Actions.h#Actions::displayPersonInfo(const Entities::Person &amp; person)" target="../sep_test/Entities.h#getAge">
+      <data key="d6">contains_call_expr</data>
+    </edge>
+    <edge source="../sep_test/Actions.h#Actions::displayCompanyInfo(const Entities::Company &amp; company)" target="../sep_test/Entities.h#Entities::Company">
+      <data key="d6">uses_custom_type</data>
+    </edge>
+    <edge source="../sep_test/Actions.h#Actions::displayCompanyInfo(const Entities::Company &amp; company)" target="/include/c++/13/ostream#std::basic_ostream::operator&lt;&lt;">
+      <data key="d6">calls_function</data>
+    </edge>
+    <edge source="../sep_test/Actions.h#Actions::displayCompanyInfo(const Entities::Company &amp; company)" target="/include/c++/13/ostream#std::operator&lt;&lt;">
+      <data key="d6">calls_function</data>
+    </edge>
+    <edge source="../sep_test/Actions.h#Actions::displayCompanyInfo(const Entities::Company &amp; company)" target="../sep_test/Entities.h#getCompanyName">
+      <data key="d6">contains_call_expr</data>
+    </edge>
+    <edge source="../sep_test/Actions.h#Actions::displayEmployeeInfo(const Entities::Company &amp; company, CustomTypes::SizeType employeeIndex)" target="../sep_test/Entities.h#Entities::Company">
+      <data key="d6">uses_custom_type</data>
+    </edge>
+    <edge source="../sep_test/Actions.h#Actions::displayEmployeeInfo(const Entities::Company &amp; company, CustomTypes::SizeType employeeIndex)" target="../sep_test/CustomTypes.h#CustomTypes::SizeType">
+      <data key="d6">uses_custom_type</data>
+    </edge>
+    <edge source="../sep_test/Actions.h#Actions::initializeAndDisplayPersonInfo(const Entities::Person &amp; original)" target="../sep_test/Entities.h#Entities::Person">
+      <data key="d6">uses_custom_type</data>
+    </edge>
+    <edge source="../sep_test/Actions.h#Actions::initializeAndDisplayPersonInfo(const Entities::Person &amp; original)" target="../sep_test/Actions.cpp#">
+      <data key="d6">calls_function</data>
+    </edge>
+    <edge source="../sep_test/Actions.h#Actions::initializeAndDisplayPersonInfo(const Entities::Person &amp; original)" target="../sep_test/Actions.cpp#Person">
+      <data key="d6">calls_function</data>
+    </edge>
+    <edge source="../sep_test/Actions.h#Actions::initializeAndDisplayPersonInfo(const Entities::Person &amp; original)" target="/include/c++/13/bits/basic_string.h#std::__cxx11::basic_string::basic_string">
+      <data key="d6">calls_function</data>
+    </edge>
+    <edge source="../sep_test/Actions.h#Actions::initializeAndDisplayPersonInfo(const Entities::Person &amp; original)" target="../sep_test/Entities.h#setFrom">
+      <data key="d6">contains_call_expr</data>
+    </edge>
+    <edge source="../sep_test/Actions.h#Actions::initializeAndDisplayPersonInfo(const Entities::Person &amp; original)" target="../sep_test/Actions.cpp#Actions::displayPersonInfo">
+      <data key="d6">calls_function</data>
+    </edge>
+  </graph>
+</graphml>

@@ -2,7 +2,7 @@ import os
 import unittest
 import clang.cindex
 from ast_graph_generator.ast_parser import parse_source, get_root_cursor
-from ast_graph_generator.node_filters import is_class, is_struct, is_function, is_namespace, is_custom_type
+from ast_graph_generator.node_filters import is_class_decl, is_struct_decl, is_function_decl, is_namespace_decl, is_custom_type
 
 # Si nécessaire, configurer le chemin de la librairie clang (adaptez le chemin à votre environnement)
 # clang.cindex.Config.set_library_file('/usr/lib/llvm-10/lib/libclang.so.1')
@@ -24,7 +24,7 @@ class TestRealCppEntities(unittest.TestCase):
         file_path = os.path.join(self.test_dir, "test_class.cpp")
         tu = parse_source(file_path)
         root = get_root_cursor(tu)
-        total_classes = self.count_nodes(root, is_class)
+        total_classes = self.count_nodes(root, is_class_decl)
         # Dans test_class.cpp, nous attendons :
         # - MyClass
         # - Outer
@@ -36,7 +36,7 @@ class TestRealCppEntities(unittest.TestCase):
         file_path = os.path.join(self.test_dir, "test_struct.cpp")
         tu = parse_source(file_path)
         root = get_root_cursor(tu)
-        total_structs = self.count_nodes(root, is_struct)
+        total_structs = self.count_nodes(root, is_struct_decl)
         # Dans test_struct.cpp, nous attendons 3 structs :
         # MyStruct, OuterStruct, OuterStruct::InnerStruct
         self.assertEqual(total_structs, 3, f"Nombre de structs incorrect dans {file_path}")
@@ -45,7 +45,7 @@ class TestRealCppEntities(unittest.TestCase):
         file_path = os.path.join(self.test_dir, "test_function.cpp")
         tu = parse_source(file_path)
         root = get_root_cursor(tu)
-        total_functions = self.count_nodes(root, is_function)
+        total_functions = self.count_nodes(root, is_function_decl)
         # Dans test_function.cpp, nous attendons 3 fonctions :
         # - freeFunction (fonction globale)
         # - MyFunctionClass::memberFunction (méthode)
@@ -56,7 +56,7 @@ class TestRealCppEntities(unittest.TestCase):
         file_path = os.path.join(self.test_dir, "test_namespace.cpp")
         tu = parse_source(file_path)
         root = get_root_cursor(tu)
-        total_namespaces = self.count_nodes(root, is_namespace)
+        total_namespaces = self.count_nodes(root, is_namespace_decl)
         # Dans test_namespace.cpp, nous attendons 2 namespaces : OuterNS et OuterNS::InnerNS.
         self.assertEqual(total_namespaces, 2, f"Nombre de namespaces incorrect dans {file_path}")
 

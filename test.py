@@ -1,4 +1,5 @@
 import os
+import clang
 from pathlib import Path
 import logging
 from clang.cindex import CompilationDatabase
@@ -8,6 +9,10 @@ from tqdm import tqdm
 
 
 def main():
+
+    
+    libclang_path = "/usr/lib/llvm-18/lib/libclang.so.1"
+    clang.cindex.Config.set_library_file(libclang_path)
 
     directory = "/home/antoine/Documents/codde-analyser"
     os.chdir(directory)

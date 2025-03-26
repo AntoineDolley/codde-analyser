@@ -1,0 +1,1 @@
+TALIOS_PATH = "/home/antoine/Documents/codde-analyser/imp_test"

@@ -8,7 +8,6 @@ from .graph_postprocessing import merge_duplicate_nodes
 from .ast_parser import parse_source, get_root_cursor
 from .graph_builder import build_graph_from_ast
 from .exporter import export_to_gml, export_to_graphml
-from .ontologie import Entity, FunctionEntity, FunctionCallEntity, TypeRefEntity
 
 def create_ast_graph_from_file_with_args(source_file: str, args: list[str], export_dir: str, out_name = "graph_output"):
     """
@@ -20,8 +19,8 @@ def create_ast_graph_from_file_with_args(source_file: str, args: list[str], expo
 
     logging.info(f"Génération du graph pour le fichier {source_file}")
 
-    ALLOWED_PATHS = []
-    ALLOWED_PATHS.append(source_file)
+    ALLOWED_PATHS = [source_file]
+    logging.debug(f"ALLOWED_PATHS={ALLOWED_PATHS}")
 
     args = ["-std=c++11"] + args
     logging.info(f"args={args}")
