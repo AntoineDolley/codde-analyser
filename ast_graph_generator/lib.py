@@ -20,9 +20,8 @@ def create_ast_graph_from_file_with_args(source_file: str, args: list[str], expo
 
     logging.info(f"Génération du graph pour le fichier {source_file}")
 
-    ALLOWED_PATHS = []#include_paths.copy()
+    ALLOWED_PATHS = []
     ALLOWED_PATHS.append(source_file)
-    logging.debug(f"ALLOWED_PATHS={ALLOWED_PATHS}")
 
     args = ["-std=c++11"] + args
     logging.info(f"args={args}")

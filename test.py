@@ -9,8 +9,10 @@ from tqdm import tqdm
 
 def main():
 
-    directory = "/users/t0315611/Documents/codde-analyser-main"
+    directory = "/home/antoine/Documents/codde-analyser"
     os.chdir(directory)
+
+    export_dir = '.'
 
     source_file = "sep_test/Actions.cpp"
     args = "-c -I./sep_test"

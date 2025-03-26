@@ -13,6 +13,7 @@ def build_hierarchy_graph(node: clang.cindex.Cursor, graph: nx.DiGraph, ALLOWED_
     old_parent = parent_node
 
     if parent_node is None:
+        # Si parent node est None cela signifie que le node est le node representant le fichier
         entity = Entity(node)
         node_type = f'{node.kind.name.lower()}'
         entity.add_to_graph(graph, node_type)

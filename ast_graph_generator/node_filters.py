@@ -1,6 +1,7 @@
 # node_filters.py
 import clang.cindex
 import os
+import logging
 
 def is_class(node):
     return node.kind in [clang.cindex.CursorKind.CLASS_DECL]
@@ -44,6 +45,7 @@ def is_allowed_node(node, ALLOWED_PATHS):
     Si le nœud appartient à un fichier d'en-tête, il est autorisé si le fichier source
     correspondant est autorisé.
     """
+    logging.debug(f"ALLOWED_PATHS={ALLOWED_PATHS}")
     if node.location and node.location.file:
         # Normalisation du chemin absolu du fichier du nœud
         file_path = os.path.normpath(os.path.abspath(node.location.file.name))
@@ -71,7 +73,4 @@ def is_allowed_node(node, ALLOWED_PATHS):
                     return True
         return False
     return True
-
-
-import clang.cindex
 
