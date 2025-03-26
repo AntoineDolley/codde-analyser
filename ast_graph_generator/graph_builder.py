@@ -62,11 +62,11 @@ def build_hierarchy_graph(node: clang.cindex.Cursor, graph: nx.DiGraph, ALLOWED_
             # =================================
 
             elif is_namespace_decl(child):
-                child_entity = Entity(child)
+                child_entity = NamespaceDeclEntity(child)
                 relation = f'contains_namespace_decl'
             
             elif is_class_decl(child):
-                child_entity = Entity(child)
+                child_entity = ClassDeclEntity(child)
                 relation = f'contains_class_decl'
 
             elif is_function_decl(child): 
@@ -76,7 +76,7 @@ def build_hierarchy_graph(node: clang.cindex.Cursor, graph: nx.DiGraph, ALLOWED_
             
             elif is_struct_decl(child): 
                 print(child.spelling)
-                child_entity = Entity(child)
+                child_entity = StrcutDeclEntity(child)
                 relation = f'contains_struct_decl'
 
             else : 

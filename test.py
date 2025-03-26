@@ -21,6 +21,10 @@ def main():
 
     source_file = "sep_test/Actions.cpp"
     args = "-c -I./sep_test"
+
+    source_file = "test_code/src/test_code.cpp"
+    args = "-c -I./test_code/Include"
+
     args = args.split()
 
     filtered_args = []
