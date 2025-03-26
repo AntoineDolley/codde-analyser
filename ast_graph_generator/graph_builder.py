@@ -1,17 +1,21 @@
 # graph_builder.py
 import networkx as nx
 import clang.cindex
-from .ontologie import Entity, FunctionEntity, FunctionCallEntity, TypeRefEntity
-from .node_filters import is_class,  uses_custom_type, is_function, is_namespace, is_struct, is_custom_type, is_function_call, is_allowed_node
+from .ontologie import Entity, FunctionEntity, FunctionCallEntity, TypeRefEntity, ClassFunctionCallEntity
+from .node_filters import is_class,  uses_custom_type, is_function, is_namespace, is_struct, is_custom_type, is_function_call, is_allowed_node, is_class_function_call
 
 def build_hierarchy_graph(node: clang.cindex.Cursor, graph: nx.DiGraph, ALLOWED_PATHS: list[str], parent_node: str = None) -> None:
     """
     Parcours récursif de l'AST pour construire un graphe hiérarchique.
     """
     # Par exemple, gérer les namespaces, classes, fonctions, etc.
+
+    old_parent = parent_node
+
     if parent_node is None:
         entity = Entity(node)
-        entity.add_to_graph(graph)
+        node_type = f'{node.kind.name.lower()}'
+        entity.add_to_graph(graph, node_type)
         parent_node = entity.name
 
     for child in node.get_children():
@@ -20,27 +24,38 @@ def build_hierarchy_graph(node: clang.cindex.Cursor, graph: nx.DiGraph, ALLOWED_
                 continue
 
         if is_class(child) or uses_custom_type(child) or is_function(child) or is_namespace(child) or is_struct(child) or is_custom_type(child) or is_function_call(child):
-            if is_function(child): 
+
+            relation = f'contains_{child.kind.name.lower()}'
+            node_type = f'{child.kind.name.lower()}'
+
+            if is_class_function_call(child): # Doit etre mis avant le check is_function()
+                print("a trouve un class typeref")
+                child_entity = ClassFunctionCallEntity(child)
+
+            elif is_function(child): 
                 child_entity = FunctionEntity(child)
+                relation = f'contains_fun_decl'
+
             elif is_function_call(child):
                 child_entity = FunctionCallEntity(child)
+                relation = f'calls_function'
+
             elif uses_custom_type(child):
                 child_entity = TypeRefEntity(child)
-            else : 
-                child_entity = Entity(child)
-
-            relation=f'contains_{child.kind.name.lower()}'
-
-            if uses_custom_type(child): 
                 relation = f'uses_custom_type'
 
-            if is_function_call(child):
-                relation = f'calls_function'
-            
-            child_entity.add_to_graph(graph)
+            else : 
+                child_entity = Entity(child)
+                
+            child_entity.add_to_graph(graph, node_type)
 
             graph.add_edge(parent_node, child_entity.name, relation=relation)
-            build_hierarchy_graph(child, graph, ALLOWED_PATHS, parent_node=child_entity.name)
+
+            #Dans le cas ou des fonctions sont appelées a la suite func1().func2() pour eviter qu'une fonction inclue une autre
+            if is_function_call(child):
+                build_hierarchy_graph(child, graph, ALLOWED_PATHS, parent_node=old_parent)
+            else: 
+                build_hierarchy_graph(child, graph, ALLOWED_PATHS, parent_node=child_entity.name)
         else:
             build_hierarchy_graph(child, graph, ALLOWED_PATHS, parent_node)
     
