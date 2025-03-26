@@ -25,3 +25,18 @@ def get_root_cursor(translation_unit: clang.cindex.TranslationUnit) -> clang.cin
     Retourne le noeud racine de l'AST
     """
     return translation_unit.cursor
+
+def parse_source_agrs(source_path: str, list_args) -> clang.cindex.TranslationUnit:
+    """
+    Parse le fichier source et retourne l'unité de traduction (AST)
+    """
+
+    std_libraries = ["-std=c++11"]
+
+    args = std_libraries + list_args
+
+    logging.info(f"args={args}")
+
+    index = clang.cindex.Index.create()
+    translation_unit = index.parse(source_path, args = args)
+    return translation_unit
