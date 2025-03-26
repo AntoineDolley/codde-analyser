@@ -21,9 +21,19 @@ def is_custom_type(node):
     return node.kind in [clang.cindex.CursorKind.TYPE_ALIAS_DECL]
 
 def is_function_call(node):
-    return node.kind in [clang.cindex.CursorKind.CALL_EXPR,] # clang.cindex.CursorKind.MEMBER_REF_EXPR]
+    return node.kind in [clang.cindex.CursorKind.CALL_EXPR, clang.cindex.CursorKind.MEMBER_REF_EXPR]
 
-import os
+def is_class_function_call(node: clang.cindex.Cursor) -> bool:
+    """
+    Vérifie si le schéma spécifié existe dans l'AST.
+    """
+    if node.kind == clang.cindex.CursorKind.CALL_EXPR:
+        for child in node.get_children():
+            if child.kind == clang.cindex.CursorKind.MEMBER_REF_EXPR:
+                for sub_child in child.get_children():
+                    if sub_child.kind == clang.cindex.CursorKind.DECL_REF_EXPR:
+                        return True
+    return False
 
 def is_allowed_node(node, ALLOWED_PATHS):
     """
@@ -61,3 +71,7 @@ def is_allowed_node(node, ALLOWED_PATHS):
                     return True
         return False
     return True
+
+
+import clang.cindex
+
