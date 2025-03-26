@@ -1,116 +1,88 @@
 import os
-import subprocess
-import clang
-from ast_graph_generator.lib import create_ast_graph_from_file
+from pathlib import Path
+from clang.cindex import CompilationDatabase
+from ast_graph_generator.lib import create_ast_graph_from_file_with_args
+from tqdm import tqdm
+import config
 
-def find_cpp_cxx_files(directory):
-    # Liste pour stocker les chemins des fichiers trouvés
-    found_files = []
-
-    # Parcourir le répertoire et ses sous-répertoires
+def find_compile_commands(directory):
+    result = []
     for root, dirs, files in os.walk(directory):
-        for file in files:
-            if file.endswith('.cpp') or file.endswith('.cxx'):
-                found_files.append(os.path.join(root, file))
-    return found_files
+        if 'compile_commands.json' in files:
+            result.append(os.path.join(root, 'compile_commands.json'))
+    return result
 
-def split_path(found_files):
-    split_files = []
-    for path in found_files:
-        # Utilisation de os.path.relpath pour enlever le ./ si présent
-        dir_name = os.path.relpath(os.path.dirname(path), start='.')
-        file_name = os.path.basename(path)
-        split_files.append((dir_name, file_name))
-    return split_files
+def parse_args(args):
+    filtered_args = []
+    args = args[4:]
+    args = args[:-1]
+    for arg in args:
+        if not (arg.startswith('-T') or arg.startswith('-c') or arg.startswith('-o') or arg == '-fPIC'): # or arg.startswith('-W')
+            filtered_args.append(arg)
+    return filtered_args
 
-def replace_extensions(files):
-    replaced_files = []
-    for dir_name, file_name in files:
-        base_name, _ = os.path.splitext(file_name)  # Retirer l'extension existante
+def main():
+    talios_path = config.TALIOS_PATH
+    graph_save_root = "/users/t0315611/Documents"
+    export_root = "ast_gen"
+    export_root_path = os.path.join(graph_save_root, export_root)
 
-        # Ajouter les nouvelles extensions
-        replaced_files.append((dir_name, f"{base_name}.o"))
-        replaced_files.append((dir_name, f"{base_name}.os"))
-        replaced_files.append((dir_name, f"{base_name}.dll"))
-    return replaced_files
+    try:
+        list_json = find_compile_commands(talios_path)
+    except Exception as e:
+        print(f"Erreur lors de la recherche des fichiers compile_commands.json dans {talios_path}: {e}")
+        return
 
-def execute_scons_command(dir_name, file_name):
-    # Commande à exécuter
-    command = f"sconsign -d {dir_name} -e {file_name} -i"
+    if not list_json:
+        print(f"Aucun fichier 'compile_commands.json' trouvé dans {talios_path}")
+        return
 
-    # Exécuter la commande avec subprocess
-    result = subprocess.run(command, shell=True, capture_output=True, text=True)
+    # Utiliser tqdm pour la boucle principale sur les fichiers compile_commands.json
+    for compile_commands_json in tqdm(list_json, desc="Traitement des fichiers compile_commands.json"):
+        try:
+            compile_commands_json_dir = os.path.dirname(compile_commands_json)
+            cdb = CompilationDatabase.fromDirectory(compile_commands_json_dir)
+            compile_cmds = cdb.getAllCompileCommands()
 
-    # Retourner la sortie sans les espaces superflus
-    return result.stdout.strip()
+            if compile_cmds is None:
+                print(f"{compile_commands_json} est vide")
+                continue
 
-def parse_output(output):
-    dependencies = []
-    lines = output.split("\n")
-    for line in lines:
-        if line.strip() and not line.startswith("==="):
-            dependencies.append(line.strip())
-    return dependencies
+            # Utiliser tqdm pour la boucle interne sur les commandes de compilation
+            for comp in tqdm(compile_cmds, desc=f"Traitement des commandes de compilation ({compile_commands_json})"):
+                try:
+                    args = [arg for arg in comp.arguments]
+                    args = parse_args(args)
+                    source_file = comp.filename
+                    cmd_exec_folder = comp.directory
 
-def filter_dependencies(dependencies):
-    filtered_dependencies = []
-    for dep in dependencies:
-        if not dep.endswith('.o:') and not dep.endswith('.os:') and os.path.splitext(dep)[1]:
-            dep_no_colon = dep.rstrip(':')  # Enlever le ':' à la fin
-            filtered_dependencies.append(dep_no_colon)
-    return filtered_dependencies
+                    try:
+                        os.chdir(cmd_exec_folder)
+                    except Exception as e:
+                        print(f"Erreur lors du changement de répertoire vers {cmd_exec_folder}: {e}")
+                        continue
 
-def create_ast_graph_for_each_file(dependency_dict, export_format='graphml', output_prefix='graph_output'):
-    libclang_path = "/usr/lib64/libclang.so.18.1.8"
-    clang.cindex.Config.set_library_file(libclang_path)
+                    rel_cmd_exec_folder = os.path.relpath(cmd_exec_folder, talios_path).replace("/", "#").replace("\\", "#")
+                    
+                    export_path = os.path.join(export_root_path, rel_cmd_exec_folder)
+                    export_dir = os.path.join(source_file.replace("/", "#").replace("\\", "#"), export_path)
+                    #out_name = source_file.replace("/", "#").replace("\\", "#")
 
-    for file_info, dependencies in dependency_dict.items():
-        dir_name, base_name = file_info
-        source_file = os.path.join(dir_name, f"{base_name}.cpp")
-        includes = [os.path.dirname(dep) for dep in dependencies]
-        includes = list(set(includes))  # Remove duplicate include paths
-        libraries = []  # If you have specific libraries, add them here.
-        library_paths = []  # If you have specific library paths, add them here.
-        export_file_prefix = f"{output_prefix}_{base_name}"
+                    abs_path = cmd_exec_folder + source_file
+                    rel_path_cpp_file = os.path.relpath(abs_path, talios_path)
+                    out_name = rel_path_cpp_file.replace("/", "#").replace("\\", "#")
 
-        if os.path.exists(source_file):  # Check if the source file exists
-            print(f"Analyzing: {source_file}")
-            create_ast_graph_from_file(source_file, export_format, export_file_name=export_file_prefix, include_paths=includes, library_paths=libraries)
-        else:
-            print(f"Source file {source_file} does not exist.")
+                    try:
+                        create_ast_graph_from_file_with_args(source_file, args, export_dir, out_name=out_name)
+                    except Exception as e:
+                        print(f"Erreur lors de la création du graphe AST pour le fichier {source_file}: {e}")
+                        continue  # Continue with the next command despite errors
+                except Exception as e:
+                    print(f"Erreur lors du traitement des commandes de compilation pour {compile_commands_json}: {e}")
+                    continue  # Continue with the next compile command despite errors
+        except Exception as e:
+            print(f"Erreur lors de la tentative de lecture {compile_commands_json}: {e}")
+            continue  # Continue with the next compile_commands.json file despite errors
 
-# Spécifiez le répertoire que vous souhaitez parcourir
-directory_to_search = '.'
-
-# Trouver les fichiers et les découper en répertoire et nom de fichier
-resulting_files = find_cpp_cxx_files(directory_to_search)
-split_files = split_path(resulting_files)
-
-# Remplacer les extensions des fichiers
-replaced_files = replace_extensions(split_files)
-
-# Dictionnaire pour stocker les dépendances
-dependency_dict = {}
-
-# Exécuter la commande scons pour chaque fichier et sauvegarder les dépendances
-for dir_name, file_name in replaced_files:
-    # Récupérer le nom de base original sans extension pour indexation
-    base_name = os.path.splitext(file_name)[0]
-    
-    # Créer la clé dans le dictionnaire
-    file_info = (dir_name, base_name)
-
-    # Initialiser la clé dans le dictionnaire si elle n'existe pas
-    if file_info not in dependency_dict:
-        dependency_dict[file_info] = []
-
-    # Exécuter la commande et capturer la sortie
-    output = execute_scons_command(dir_name, file_name)
-    
-    # Extraire et filtrer les dépendances
-    dependencies = parse_output(output)
-    filtered_dependencies = filter_dependencies(dependencies)
-    dependency_dict[file_info].extend(filtered_dependencies)
-
-# Analyser chaque fichier source et exporter le graphe
-create_ast_graph_for_each_file(dependency_dict)
+if __name__ == "__main__":
+    main()
