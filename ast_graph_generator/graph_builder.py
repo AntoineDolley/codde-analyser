@@ -22,7 +22,7 @@ def build_hierarchy_graph(node: clang.cindex.Cursor, graph: nx.DiGraph, ALLOWED_
 
     if parent_node is None:
         # Si parent node est None cela signifie que le node est le node representant le fichier
-        entity = Entity(node)
+        entity = FileEntity(node)
         node_type = f'{node.kind.name.lower()}'
         entity.add_to_graph(graph, node_type)
         parent_node = entity.name
@@ -37,25 +37,34 @@ def build_hierarchy_graph(node: clang.cindex.Cursor, graph: nx.DiGraph, ALLOWED_
             relation = f'contains_{child.kind.name.lower()}'
             node_type = f'{child.kind.name.lower()}'
 
-            if is_class_function_call(child): # Doit etre mis avant le check is_function_call()
-                print("a trouve un class typeref", node.spelling)
-                child_entity = ClassFunctionCallEntity(child)
+            # =================================
+            # Parsing des noeuds des references
+            # =================================
 
-            elif is_function_call(child) and child.spelling is None:
-                #Correspond a un constructeur
-                print("found constructeur",type(child.spelling))
-
-            elif is_function_call(child):
-                child_entity = FunctionCallEntity(child)
+            if is_standalone_function_call(child):
+                print("a trouve un standalone_function_call", node.spelling)
+                child_entity = StandaloneFunctionCallEntity(child)
                 relation = f'calls_function'
 
-            # =================================
-            # Parsing des noeuds de declaration
-            # =================================
+            elif is_class_function_call(child):
+                print("a trouve un class typeref", node.spelling)
+                child_entity = ClassFunctionCallEntity(child)
+                relation = f'calls_class_function'
 
+            elif is_class_function_call_unxeposed(child):
+                print("a trouve un class_function_call_unxeposed", node.spelling)
+                child_entity = UnexposedClassFunctionCallEntity(child)
+                relation = f'calls_class_function'
+
+            elif is_constructor_call(child):
+                #Correspond a un constructeur
+                print("found constructeur",type(child.spelling))
+                child_entity = ConstructorClassFunctionCallEntity(child)
+                relation = f'calls_class_constructor'
+                
             elif uses_custom_type(child):
                 child_entity = TypeRefEntity(child)
-                relation = f'uses_custom_type'
+                relation = f'calls_custom_type'
 
             # =================================
             # Parsing des noeuds de declaration
@@ -80,7 +89,7 @@ def build_hierarchy_graph(node: clang.cindex.Cursor, graph: nx.DiGraph, ALLOWED_
                 relation = f'contains_struct_decl'
 
             else : 
-                print("Noeud non reconnu", node.spelling)
+                print("Noeud passe les tests de types mais non parsé", node.spelling, node.location.file)
                 child_entity = Entity(child)
                 
             child_entity.add_to_graph(graph, node_type)
@@ -88,7 +97,7 @@ def build_hierarchy_graph(node: clang.cindex.Cursor, graph: nx.DiGraph, ALLOWED_
             graph.add_edge(parent_node, child_entity.name, relation=relation)
 
             #Dans le cas ou des fonctions sont appelées a la suite func1().func2() pour eviter qu'une fonction inclue une autre
-            if is_function_call(child):
+            if is_standalone_function_call(child):
                 build_hierarchy_graph(child, graph, ALLOWED_PATHS, parent_node=old_parent)
             else: 
                 build_hierarchy_graph(child, graph, ALLOWED_PATHS, parent_node=child_entity.name)
