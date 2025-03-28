@@ -29,7 +29,10 @@ def print_ast(node, ALLOWED_PATHS, depth=0, file=None):
     ref = ""
     args = ""
     try:
-        ref = node.referenced.get_definition().kind
+        ref_kind = node.referenced.kind
+        ref_node = node.referenced
+        location2 = ref_node.location if ref_node.location else "N/A"
+        ref = f"<Kind: {ref_node.kind}| Spelling: {ref_node.displayname} | Location: {location2}>"
     except :
         pass
 
@@ -45,7 +48,7 @@ def print_ast(node, ALLOWED_PATHS, depth=0, file=None):
         pass
                 
     # Construire la chaîne à écrire pour ce nœud
-    file.write(f"{indent}Kind: {node.kind} {args} | Is allowed {is_allowed_node(node, ALLOWED_PATHS)} | Spelling: {node.spelling} | Is Ref {ref} {new_node} | Location: {location}\n")
+    file.write(f"{indent}Kind: {node.kind} {args} | Is allowed {is_allowed_node(node, ALLOWED_PATHS)} | Spelling: {node.displayname} | Is Ref {ref} | Location: {location}\n")
     
     # Parcourir les enfants du nœud
     for child in node.get_children():
