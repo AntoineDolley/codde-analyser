@@ -1,6 +1,7 @@
 # node_filters.py
-import clang.cindex
 import os
+import logging
+import clang.cindex
 
 def is_in_ontologie(node):
     """
@@ -11,22 +12,17 @@ def is_in_ontologie(node):
         is_struct_decl(node) or
         is_function_decl(node) or
         is_namespace_decl(node) or
+        is_custom_type_decl(node) or
         uses_custom_type(node) or
-        is_custom_type(node) or
-        is_function_call(node) or
-        is_class_function_call(node)
+        is_standalone_function_call(node) or
+        is_class_function_call(node) or 
+        is_class_function_call_unxeposed(node) or 
+        is_constructor_call(node)
     )
 
-def is_a_declaration(node):
-    """
-    Retourne True si le nœud est une declaration
-    """
-    return (
-        is_class_decl(node) or
-        is_struct_decl(node) or
-        is_function_decl(node) or
-        is_namespace_decl(node)
-    )
+# =================================
+# Parsing des noeuds de declaration
+# =================================
 
 def is_class_decl(node):
     return node.kind in [clang.cindex.CursorKind.CLASS_DECL]
@@ -40,29 +36,47 @@ def is_function_decl(node):
 def is_namespace_decl(node):
     return node.kind in [clang.cindex.CursorKind.NAMESPACE]
 
+def is_custom_type_decl(node):
+    return node.kind in [clang.cindex.CursorKind.TYPE_ALIAS_DECL]
+
+# =================================
+# Parsing des noeuds des references
+# =================================
+
 def uses_custom_type(node):
     return node.kind in [clang.cindex.CursorKind.TYPE_REF]
 
-def is_custom_type(node):
-    return node.kind in [clang.cindex.CursorKind.TYPE_ALIAS_DECL]
-
-def is_function_call(node):
-    return node.kind in [clang.cindex.CursorKind.CALL_EXPR, clang.cindex.CursorKind.MEMBER_REF_EXPR]
-
-def is_class_function_call(node: clang.cindex.Cursor) -> bool:
-    """
-    Vérifie si le schéma spécifié existe dans l'AST.
-    """
-    if node.kind == clang.cindex.CursorKind.CALL_EXPR:
-        for child in node.get_children():
-            if child.kind == clang.cindex.CursorKind.MEMBER_REF_EXPR:
-                for sub_child in child.get_children():
-                    if sub_child.kind == clang.cindex.CursorKind.DECL_REF_EXPR:
-                        return True
+def is_standalone_function_call(node):
+    if node.kind in [clang.cindex.CursorKind.CALL_EXPR] and node.get_definition() is not None:
+        if node.get_definition().kind in [clang.cindex.CursorKind.FUNCTION_DECL]:
+            return True
     return False
 
-import os
-import logging
+def is_class_function_call(node):
+    if node.kind in [clang.cindex.CursorKind.CALL_EXPR] and node.get_definition() is not None:
+        if node.get_definition().kind in [clang.cindex.CursorKind.CXX_METHOD]:
+            return True
+
+def is_class_function_call_unxeposed(node):
+    if node.kind in [clang.cindex.CursorKind.CALL_EXPR, clang.cindex.CursorKind.UNEXPOSED_EXPR]:
+        for child in node.get_children():
+            if child.kind in [clang.cindex.CursorKind.MEMBER_REF_EXPR] and child.get_definition() is not None:
+                return True
+    return False
+
+def is_constructor_call(node):
+    if node.kind == clang.cindex.CursorKind.DECL_STMT:
+        for child in node.get_children():
+            if child.kind == clang.cindex.CursorKind.VAR_DECL:
+                for grandchild in child.get_children():
+                    if grandchild.kind == clang.cindex.CursorKind.TYPE_REF and grandchild.referenced is not None:
+                        if grandchild.referenced.get_definition().kind == clang.cindex.CursorKind.CLASS_DECL:
+                            return True
+    return False
+
+# =================================
+# Filtres
+# =================================
 
 def is_allowed_node(node, ALLOWED_PATHS):
     """
@@ -113,4 +127,8 @@ def is_allowed_node(node, ALLOWED_PATHS):
 
     # Pour les autres types de fichiers, on exclut le nœud
     return False
+
+
+
+
 
