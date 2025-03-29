@@ -114,16 +114,16 @@ def is_allowed_node(node, ALLOWED_PATHS):
                 return True
         return False
 
-    # Si le nœud est dans un fichier d'en-tête, on accepte uniquement s'il existe un fichier source correspondant
-    if ext in ['.h', '.hpp', '.hh']:
-        for src_ext in source_exts:
-            corresponding = root_name + src_ext
-            corresponding_abs = os.path.normpath(os.path.abspath(corresponding))
-            for allowed in ALLOWED_PATHS:
-                allowed_abs = os.path.normpath(os.path.abspath(allowed))
-                if corresponding_abs == allowed_abs or os.path.basename(corresponding_abs).lower() == os.path.basename(allowed_abs).lower():
-                    return True
-        return False
+    # # Si le nœud est dans un fichier d'en-tête, on accepte uniquement s'il existe un fichier source correspondant
+    # if ext in ['.h', '.hpp', '.hh']:
+    #     for src_ext in source_exts:
+    #         corresponding = root_name + src_ext
+    #         corresponding_abs = os.path.normpath(os.path.abspath(corresponding))
+    #         for allowed in ALLOWED_PATHS:
+    #             allowed_abs = os.path.normpath(os.path.abspath(allowed))
+    #             if corresponding_abs == allowed_abs or os.path.basename(corresponding_abs).lower() == os.path.basename(allowed_abs).lower():
+    #                 return True
+    #     return False
 
     # Pour les autres types de fichiers, on exclut le nœud
     return False

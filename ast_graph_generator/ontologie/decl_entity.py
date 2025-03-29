@@ -10,7 +10,7 @@ from .ontologie_utils import get_function_signature
 class DeclEntity(Entity):
     def __init__(self, node: clang.cindex.Cursor):
         super().__init__(node)
-        self.node_type = NodeType.DECL
+        self.node_type = NodeType.DECL.value
 
 @dataclass
 class NamespaceDeclEntity(DeclEntity):

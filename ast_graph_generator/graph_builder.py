@@ -24,7 +24,7 @@ def build_hierarchy_graph(node: clang.cindex.Cursor, graph: nx.DiGraph, ALLOWED_
         # Si parent node est None cela signifie que le node est le node representant le fichier
         entity = FileEntity(node)
         node_type = f'{node.kind.name.lower()}'
-        entity.add_to_graph(graph, node_type)
+        entity.add_to_graph(graph)
         parent_node = entity.name
 
     for child in node.get_children():
@@ -92,7 +92,7 @@ def build_hierarchy_graph(node: clang.cindex.Cursor, graph: nx.DiGraph, ALLOWED_
                 print("Noeud passe les tests de types mais non parsé", node.spelling, node.location.file)
                 child_entity = Entity(child)
                 
-            child_entity.add_to_graph(graph, node_type)
+            child_entity.add_to_graph(graph)
 
             graph.add_edge(parent_node, child_entity.name, relation=relation)
 

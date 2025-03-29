@@ -22,21 +22,19 @@ class Entity:
         Extraction automatique du nom, fichier, lignes de début et fin de déclaration, et position dans le namespace.
         """
 
-        file = node.location.file if node.location else None
-        
-        if file:
-            self.decl_file = get_correct_path(os.path.normpath(file.name))
-        elif self.start_line == 0 and file is None:
-            # En général, quand le file n'est pas trouvé c'est parce que le node est le root du fichier
-            self.decl_file = get_correct_path(node.spelling)
-        else:
-            self.decl_file = 'Decl_file non trouvée'
-
         # Extraction des informations de localisation via extent pour obtenir la ligne de début et de fin de déclaration
         self.start_line = node.extent.start.line if node.extent and node.extent.start else None
         self.end_line = node.extent.end.line if node.extent and node.extent.end else None
 
-        self.type = NodeType.GENERIC
+        file = node.location.file if node.location else None
+        
+        if file:
+            self.decl_file = get_correct_path(os.path.normpath(file.name))
+        elif self.start_line == 1 and file is None:
+            # En général, quand le file n'est pas trouvé c'est parce que le node est le root du fichier
+            self.decl_file = get_correct_path(node.spelling)
+        else:
+            self.decl_file = 'Decl_file non trouvée'
         
         self.name = node.spelling
         # Construction de la hiérarchie du namespace
@@ -45,6 +43,7 @@ class Entity:
             self.name = self.name.split('::')[-1]
         
         self.name = f"{self.decl_file}#{self.namespace_position}"
+        self.type = NodeType.GENERIC.value
     
     def _build_namespace_position(self, node: clang.cindex.Cursor) -> Optional[str]:
         """

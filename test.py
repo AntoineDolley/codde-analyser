@@ -12,9 +12,13 @@ def main():
 
     
     libclang_path = "/usr/lib64/libclang.so.18.1"
+    libclang_path = "/usr/lib/llvm-18/lib/libclang.so.1"
+    
     clang.cindex.Config.set_library_file(libclang_path)
 
     directory = "/users/t0315611/Documents/codde-analyser-refactoring"
+    directory = "/home/antoine/Documents/codde-analyser"
+    
     os.chdir(directory)
 
     export_dir = '.'

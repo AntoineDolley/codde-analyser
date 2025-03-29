@@ -32,7 +32,7 @@ def get_class_node(node):
                 if child.kind == clang.cindex.CursorKind.MEMBER_REF_EXPR:
                     for sub_child_1 in child.get_children():
                         if sub_child_1.kind == clang.cindex.CursorKind.DECL_REF_EXPR:
-                            for sub_child_2 in sub_child_1.referenced.get_definition().get_children():
+                            for sub_child_2 in sub_child_1.get_definition().get_children():
                                 if sub_child_2.kind == clang.cindex.CursorKind.TYPE_REF:
                                     return sub_child_2
     print("N'est pas une fonction d'une custom class", node.spelling)

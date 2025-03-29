@@ -43,7 +43,7 @@ def create_ast_graph_from_file_with_args(source_file: str, args: list[str], expo
 
     # Construction et post-traitement du graph
     graph = build_graph_from_ast(root, ALLOWED_PATHS)
-    graph = merge_duplicate_nodes(graph)
+    #graph = merge_duplicate_nodes(graph)
 
     # Exporter le graph dans le dossier ast_gen/
     
