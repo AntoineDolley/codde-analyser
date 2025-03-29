@@ -1,3 +1,4 @@
+# ontologie/decl_namespace_entity.py
 from dataclasses import dataclass
 import clang.cindex
 from .entity import Entity

@@ -1,4 +1,4 @@
-# ontologie.py
+# ontologie/ontologie_utils.py
 from dataclasses import dataclass, field
 from ..utils import get_correct_path
 import networkx as nx

@@ -1,3 +1,4 @@
+# ontologie/__init__.py
 from .entity import Entity
 
 # Objet correspondant au debut de file
@@ -14,7 +15,6 @@ from .decl_struct_entity import StrcutDeclEntity
 from .uses_type_ref_entity import TypeRefEntity
 
 # Objet correspondant aux appels de fonctions methodes constructeurs
-#Appel d'une fonction standalone
 from .call_standalone_function import StandaloneFunctionCallEntity
 from .call_class_function_entity import ClassFunctionCallEntity
 from .call_class_function_unexposed_entity import UnexposedClassFunctionCallEntity
