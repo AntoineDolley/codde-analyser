@@ -39,6 +39,7 @@ class Entity:
         self.name = node.spelling
         # Construction de la hiérarchie du namespace
         self.namespace_position = self._build_namespace_position(node)
+        
         if '::' in self.name:
             self.name = self.name.split('::')[-1]
         

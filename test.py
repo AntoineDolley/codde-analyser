@@ -29,11 +29,11 @@ def main():
     source_file = "test_code/src/main.cpp"
     args = "-c -I./test_code/Include"
 
-    # source_file = "test_code/src/test_code.cpp"
-    # args = "-c -I./test_code/Include"
+    source_file = "test_code/src/test_code.cpp"
+    args = "-c -I./test_code/Include"
 
-    source_file = "sep_test/Actions.cpp"
-    args = "-c -I./sep_test/"
+    # source_file = "sep_test/Actions.cpp"
+    # args = "-c -I./sep_test/"
 
     args = args.split()
 
