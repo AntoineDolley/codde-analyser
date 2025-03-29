@@ -1,7 +1,8 @@
 # ontologie/uses_type_ref_entity.py
-from dataclasses import dataclass
 import clang.cindex
 from .entity import Entity
+from dataclasses import dataclass
+from .node_type_enum import NodeType
 
 @dataclass
 class TypeRefEntity(Entity):

@@ -1,7 +1,8 @@
 # ontologie/call_standalone_function.py
-from dataclasses import dataclass
 import clang.cindex
 from .entity import Entity
+from dataclasses import dataclass
+from .node_type_enum import NodeType
 from .ontologie_utils import get_function_signature
 
 @dataclass

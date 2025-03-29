@@ -1,7 +1,9 @@
 # ontologie/call_constructor_function_entity.py
-from dataclasses import dataclass
 import clang.cindex
-from .uses_type_ref_entity import TypeRefEntity
+from .entity import Entity
+from dataclasses import dataclass
+from .node_type_enum import NodeType
+from .call_type_ref_entity import TypeRefEntity
 from .ontologie_utils import get_function_signature, get_class_node
 
 @dataclass
