@@ -9,14 +9,23 @@ from .ontologie_utils import get_function_signature, get_class_node
 @dataclass
 class ConstructorClassFunctionCallEntity(TypeRefEntity):
     def __init__(self, node: clang.cindex.Cursor):
-        # On calcule la signature complète avant d'initialiser le reste
-        signature = get_function_signature(node)
 
-        class_node = get_class_node(node)
+        func_node = node
+
+        for child in node.get_children():
+            if child.kind == clang.cindex.CursorKind.VAR_DECL:
+                for grandchild in child.get_children():
+                    if grandchild.kind == clang.cindex.CursorKind.TYPE_REF and grandchild.referenced is not None:
+                        if grandchild.get_definition().kind == clang.cindex.CursorKind.CLASS_DECL:
+                            func_node = grandchild.get_definition()
+ 
+        # On calcule la signature complète avant d'initialiser le reste
+        signature = get_function_signature(func_node)
 
         # Appel à l'initialisation de la classe parente pour récupérer les autres attributs
-        super().__init__(class_node) # Initialise correctement decl_file row et columns
+        super().__init__(func_node) # Initialise correctement decl_file row et columns
         # On remplace le nom par la signature complète
         self.name = signature
-        self.namespace_position = self._build_namespace_position(node)
+        self.namespace_position = self._build_namespace_position(func_node)
         self.name = f"{self.decl_file}#{self.namespace_position}"
+        self.type = NodeType.CALL.value

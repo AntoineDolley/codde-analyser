@@ -44,7 +44,7 @@ def is_custom_type_decl(node):
 # =================================
 
 def uses_custom_type(node):
-    return node.kind in [clang.cindex.CursorKind.TYPE_REF]
+    return node.kind in [clang.cindex.CursorKind.TYPE_REF] and node.referenced is not None
 
 def is_standalone_function_call(node):
     if node.kind in [clang.cindex.CursorKind.CALL_EXPR] and node.get_definition() is not None:
@@ -56,6 +56,7 @@ def is_class_function_call(node):
     if node.kind in [clang.cindex.CursorKind.CALL_EXPR] and node.get_definition() is not None:
         if node.get_definition().kind in [clang.cindex.CursorKind.CXX_METHOD]:
             return True
+    return False
 
 def is_class_function_call_unxeposed(node):
     if node.kind in [clang.cindex.CursorKind.CALL_EXPR, clang.cindex.CursorKind.UNEXPOSED_EXPR]:
@@ -70,7 +71,7 @@ def is_constructor_call(node):
             if child.kind == clang.cindex.CursorKind.VAR_DECL:
                 for grandchild in child.get_children():
                     if grandchild.kind == clang.cindex.CursorKind.TYPE_REF and grandchild.referenced is not None:
-                        if grandchild.referenced.get_definition().kind == clang.cindex.CursorKind.CLASS_DECL:
+                        if grandchild.get_definition().kind == clang.cindex.CursorKind.CLASS_DECL:
                             return True
     return False
 

@@ -35,30 +35,25 @@ def build_hierarchy_graph(node: clang.cindex.Cursor, graph: nx.DiGraph, ALLOWED_
         if is_in_ontologie(child):
 
             relation = f'contains_{child.kind.name.lower()}'
-            node_type = f'{child.kind.name.lower()}'
 
             # =================================
             # Parsing des noeuds des references
             # =================================
 
             if is_standalone_function_call(child):
-                print("a trouve un standalone_function_call", node.spelling)
                 child_entity = StandaloneFunctionCallEntity(child)
                 relation = f'calls_function'
 
             elif is_class_function_call(child):
-                print("a trouve un class typeref", node.spelling)
                 child_entity = ClassFunctionCallEntity(child)
                 relation = f'calls_class_function'
 
             elif is_class_function_call_unxeposed(child):
-                print("a trouve un class_function_call_unxeposed", node.spelling)
                 child_entity = UnexposedClassFunctionCallEntity(child)
                 relation = f'calls_class_function'
 
             elif is_constructor_call(child):
                 #Correspond a un constructeur
-                print("found constructeur",type(child.spelling))
                 child_entity = ConstructorClassFunctionCallEntity(child)
                 relation = f'calls_class_constructor'
                 
@@ -79,12 +74,10 @@ def build_hierarchy_graph(node: clang.cindex.Cursor, graph: nx.DiGraph, ALLOWED_
                 relation = f'contains_class_decl'
 
             elif is_function_decl(child): 
-                print(child.spelling)
                 child_entity = FunctionDeclEntity(child)
                 relation = f'contains_fun_decl'
             
             elif is_struct_decl(child): 
-                print(child.spelling)
                 child_entity = StrcutDeclEntity(child)
                 relation = f'contains_struct_decl'
 
