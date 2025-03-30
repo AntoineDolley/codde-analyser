@@ -20,10 +20,10 @@ def print_ast(node, ALLOWED_PATHS, depth=0, file=None):
     new_node = "None"
 
     if node.referenced: 
-            new_node = node.referenced.get_definition()
+            new_node = node.referenced
             if new_node is None:
                 try :
-                    new_node = node.referenced.get_declaration()
+                    new_node = node.referenced
                 except : 
                     pass
     ref = ""

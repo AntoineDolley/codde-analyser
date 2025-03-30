@@ -12,7 +12,7 @@ class StandaloneFunctionCallEntity(Entity):
         func_node = node
 
         if node.referenced is not None: 
-            func_node = node.get_definition()
+            func_node = node.referenced
 
         # On calcule la signature complète avant d'initialiser le reste
         signature = get_function_signature(func_node)

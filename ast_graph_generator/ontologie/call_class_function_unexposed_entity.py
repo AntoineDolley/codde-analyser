@@ -7,14 +7,14 @@ from .call_type_ref_entity import TypeRefEntity
 from .ontologie_utils import get_function_signature, get_class_node
 
 @dataclass
-class UnexposedClassFunctionCallEntity(TypeRefEntity):
+class UnexposedClassFunctionCallEntity(Entity):
     def __init__(self, node: clang.cindex.Cursor):
 
         func_node = node
 
         for child in node.get_children():
-            if child.kind in [clang.cindex.CursorKind.MEMBER_REF_EXPR] and child.get_definition() is not None:
-                func_node = child.get_definition()
+            if child.kind in [clang.cindex.CursorKind.MEMBER_REF_EXPR] and child.reference is not None:
+                func_node = child.reference
 
         # On calcule la signature complète avant d'initialiser le reste
         signature = get_function_signature(func_node)

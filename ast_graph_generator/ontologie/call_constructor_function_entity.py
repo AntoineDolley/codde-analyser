@@ -3,21 +3,20 @@ import clang.cindex
 from .entity import Entity
 from dataclasses import dataclass
 from .node_type_enum import NodeType
-from .call_type_ref_entity import TypeRefEntity
 from .ontologie_utils import get_function_signature, get_class_node
 
 @dataclass
-class ConstructorClassFunctionCallEntity(TypeRefEntity):
+class ConstructorClassFunctionCallEntity(Entity):
     def __init__(self, node: clang.cindex.Cursor):
 
         func_node = node
 
-        for child in node.get_children():
-            if child.kind == clang.cindex.CursorKind.VAR_DECL:
-                for grandchild in child.get_children():
-                    if grandchild.kind == clang.cindex.CursorKind.TYPE_REF and grandchild.referenced is not None:
-                        if grandchild.get_definition().kind == clang.cindex.CursorKind.CLASS_DECL:
-                            func_node = grandchild.get_definition()
+        for child in node.walk_preorder():
+            if child.kind in [clang.cindex.CursorKind.CALL_EXPR] and child.referenced is not None:
+                if child.referenced.kind in [clang.cindex.CursorKind.CONSTRUCTOR]:
+                    if child.referenced.location:
+                        if not child.referenced.location.file.name.startswith("/"):
+                            func_node = child.referenced
  
         # On calcule la signature complète avant d'initialiser le reste
         signature = get_function_signature(func_node)

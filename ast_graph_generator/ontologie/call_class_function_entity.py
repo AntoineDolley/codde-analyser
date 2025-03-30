@@ -7,13 +7,13 @@ from .call_type_ref_entity import TypeRefEntity
 from .ontologie_utils import get_function_signature, get_class_node
 
 @dataclass
-class ClassFunctionCallEntity(TypeRefEntity):
+class ClassFunctionCallEntity(Entity):
     def __init__(self, node: clang.cindex.Cursor):
 
         func_node = node
 
         if node.referenced is not None: 
-            func_node = node.get_definition()
+            func_node = node.referenced
 
         # On calcule la signature complète avant d'initialiser le reste
         signature = get_function_signature(func_node)

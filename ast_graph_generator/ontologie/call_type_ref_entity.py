@@ -11,7 +11,7 @@ class TypeRefEntity(Entity):
         # On recupère le neud du type custom
         node_ref = node
         if node.referenced is not None: 
-            new_node = node.get_definition()
+            new_node = node.referenced
             if new_node is None:
                 print("Didint find node Type")
                 node_ref = node
