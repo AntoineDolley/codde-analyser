@@ -6,7 +6,6 @@ import config
 
 def setup_for_os():
     system = platform.system()
-    libclang_path = None
 
     library_paths = []
 
@@ -20,7 +19,7 @@ def setup_for_os():
             'stdc++',
         ]
 
-        libclang_path = "/usr/lib64/libclang.so.18.1.8"
+        libclang_path = config.LIBCLANG_PATH
         clang.cindex.Config.set_library_file(libclang_path)
 
     elif "Windows" in system:

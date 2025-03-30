@@ -1,7 +1,8 @@
 import os
 import clang
-from pathlib import Path
+import config
 import logging
+from pathlib import Path
 from clang.cindex import CompilationDatabase
 from ast_graph_generator.lib import create_ast_graph_from_file_with_args
 from tqdm import tqdm
@@ -10,9 +11,7 @@ from tqdm import tqdm
 
 def main():
 
-    
-    libclang_path = "/usr/lib64/libclang.so.18.1"
-    libclang_path = "/usr/lib/llvm-18/lib/libclang.so.1"
+    libclang_path = config.LIBCLANG_PATH
     
     clang.cindex.Config.set_library_file(libclang_path)
 

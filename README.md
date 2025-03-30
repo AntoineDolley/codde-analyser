@@ -2,7 +2,7 @@
 
 python3 src/main.py --source test_code/src/test_code.cpp --includes test_code/Includes/test_code.h
 
-ne pas mettre de ./
+python -m unittest discover ast_graph_generator/tests/
 
 pour generer les commandes de compilation 
 

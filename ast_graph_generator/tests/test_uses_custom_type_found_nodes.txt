@@ -1,0 +1,12 @@
+Node spelling class Entities::Person Node location file test_files/test_call/Actions.h Node decl start line 7 Node decl end line 7
+Node spelling class Entities::Company Node location file test_files/test_call/Actions.h Node decl start line 8 Node decl end line 8
+Node spelling class Entities::Company Node location file test_files/test_call/Actions.h Node decl start line 9 Node decl end line 9
+Node spelling CustomTypes::SizeType Node location file test_files/test_call/Actions.h Node decl start line 9 Node decl end line 9
+Node spelling class Entities::Person Node location file test_files/test_call/Actions.h Node decl start line 10 Node decl end line 10
+Node spelling class Entities::Person Node location file test_files/test_call/Actions.cpp Node decl start line 6 Node decl end line 6
+Node spelling class Entities::Company Node location file test_files/test_call/Actions.cpp Node decl start line 11 Node decl end line 11
+Node spelling class Entities::Company Node location file test_files/test_call/Actions.cpp Node decl start line 15 Node decl end line 15
+Node spelling CustomTypes::SizeType Node location file test_files/test_call/Actions.cpp Node decl start line 15 Node decl end line 15
+Node spelling class Entities::Person Node location file test_files/test_call/Actions.cpp Node decl start line 18 Node decl end line 18
+Node spelling class Entities::Person Node location file test_files/test_call/Actions.cpp Node decl start line 19 Node decl end line 19
+Node spelling class Entities::Person Node location file test_files/test_call/Actions.cpp Node decl start line 19 Node decl end line 19

@@ -1,6 +1,7 @@
-import argparse
-import logging
 import os
+import config
+import logging
+import argparse
 import clang.cindex
 from .debug_util import setup_logging, print_ast  # Assurez-vous que print_ast est défini dans debug_util.py
 from .utils import setup_for_os
@@ -118,7 +119,7 @@ def main():
     logging.debug("Démarrage du programme en mode DEBUG (lib.py)")
 
     # Configuration de libclang (adapter le chemin à votre système)
-    libclang_path = "/usr/lib64/libclang.so.18.1.8"
+    libclang_path = config.LIBCLANG_PATH
     clang.cindex.Config.set_library_file(libclang_path)
 
     # Parsing du fichier source pour obtenir l'AST et construire le graph
