@@ -47,21 +47,21 @@ def uses_custom_type(node):
     return node.kind in [clang.cindex.CursorKind.TYPE_REF] and node.referenced is not None
 
 def is_standalone_function_call(node):
-    if node.kind in [clang.cindex.CursorKind.CALL_EXPR] and node.get_definition() is not None:
-        if node.get_definition().kind in [clang.cindex.CursorKind.FUNCTION_DECL]:
+    if node.kind in [clang.cindex.CursorKind.CALL_EXPR] and node.referenced is not None:
+        if node.referenced.kind in [clang.cindex.CursorKind.FUNCTION_DECL]:
             return True
     return False
 
 def is_class_function_call(node):
-    if node.kind in [clang.cindex.CursorKind.CALL_EXPR] and node.get_definition() is not None:
-        if node.get_definition().kind in [clang.cindex.CursorKind.CXX_METHOD]:
+    if node.kind in [clang.cindex.CursorKind.CALL_EXPR] and node.referenced is not None:
+        if node.referenced.kind in [clang.cindex.CursorKind.CXX_METHOD]:
             return True
     return False
 
 def is_class_function_call_unxeposed(node):
-    if node.kind in [clang.cindex.CursorKind.CALL_EXPR, clang.cindex.CursorKind.UNEXPOSED_EXPR]:
+    if node.kind in [clang.cindex.CursorKind.UNEXPOSED_EXPR]:
         for child in node.get_children():
-            if child.kind in [clang.cindex.CursorKind.MEMBER_REF_EXPR] and child.get_definition() is not None:
+            if child.kind in [clang.cindex.CursorKind.MEMBER_REF_EXPR] and child.referenced is not None:
                 return True
     return False
 
@@ -71,7 +71,7 @@ def is_constructor_call(node):
             if child.kind == clang.cindex.CursorKind.VAR_DECL:
                 for grandchild in child.get_children():
                     if grandchild.kind == clang.cindex.CursorKind.TYPE_REF and grandchild.referenced is not None:
-                        if grandchild.get_definition().kind == clang.cindex.CursorKind.CLASS_DECL:
+                        if grandchild.referenced.kind == clang.cindex.CursorKind.CLASS_DECL:
                             return True
     return False
 

@@ -4,11 +4,12 @@
 namespace Actions {
 
     void displayPersonInfo(const Entities::Person& person) {
-        std::cout << "Name: " << person.getName() << ", Age: " << person.getAge() << std::endl;
+        person.getName();
+        person.getAge();
     }
 
     void displayCompanyInfo(const Entities::Company& company) {
-        std::cout << "Company: " << company.getCompanyName() << ", Number of Employees: " << std::endl;
+        company.getCompanyName();
     }
 
     void displayEmployeeInfo(const Entities::Company& company, CustomTypes::SizeType employeeIndex) {

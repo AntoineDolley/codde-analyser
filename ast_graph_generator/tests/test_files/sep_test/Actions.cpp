@@ -16,8 +16,8 @@ namespace Actions {
     }
 
     void initializeAndDisplayPersonInfo(const Entities::Person& original) {
-        Entities::Person newPerson = Entities::Person("", 0); 
-        newPerson.setFrom(original); 
-        displayPersonInfo(newPerson);
+        Entities::Person newPerson = Entities::Person("", 0); // Initialisation avec des valeurs par défaut
+        newPerson.setFrom(original); // Utilisation de la fonction setFrom
+        displayPersonInfo(newPerson); // Afficher les informations du nouvel objet initialisé
     }
 }
