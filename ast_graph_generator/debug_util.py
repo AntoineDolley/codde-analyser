@@ -1,6 +1,6 @@
 # debug_util.py
 import logging
-from .node_filters import is_allowed_node
+from .node_filters import *
 
 def setup_logging(level=logging.DEBUG):
     logging.basicConfig(
@@ -48,7 +48,7 @@ def print_ast(node, ALLOWED_PATHS, depth=0, file=None):
         pass
                 
     # Construire la chaîne à écrire pour ce nœud
-    file.write(f"{indent}Kind: {node.kind} {args} | Is allowed {is_allowed_node(node, ALLOWED_PATHS)} | Spelling: {node.displayname} | Is Ref {ref} | Location: {location}\n")
+    file.write(f"{indent}Kind: {node.kind} {args} | Is allowed header {is_allowed_header_node(node, ALLOWED_PATHS)} | Is allowed Source {is_allowed_source_node(node, ALLOWED_PATHS)} | Spelling: {node.displayname} | Is Ref {ref} | Location: {location}\n")
     
     # Parcourir les enfants du nœud
     for child in node.get_children():

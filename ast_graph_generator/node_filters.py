@@ -35,6 +35,7 @@ def is_call(node):
     Retourne True si le nœud est un appel
     """
     return (
+        is_function_decl(node) or
         uses_custom_type(node) or
         is_standalone_function_call(node) or
         is_class_function_call(node) or 
