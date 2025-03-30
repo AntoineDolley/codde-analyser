@@ -20,7 +20,8 @@ def get_function_signature(node: clang.cindex.Cursor) -> str:
     params = []
     for arg in node.get_arguments():
         param_type = arg.type.spelling
-        params.append(param_type)
+        param_name = arg.spelling
+        params.append(f"{param_type} {param_name}" if param_name else param_type)
     signature = f"{func_name}({', '.join(params)})"
     return signature
 
