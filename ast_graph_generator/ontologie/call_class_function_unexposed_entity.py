@@ -13,8 +13,8 @@ class UnexposedClassFunctionCallEntity(Entity):
         func_node = node
 
         for child in node.get_children():
-            if child.kind in [clang.cindex.CursorKind.MEMBER_REF_EXPR] and child.reference is not None:
-                func_node = child.reference
+            if child.kind in [clang.cindex.CursorKind.MEMBER_REF_EXPR] and child.referenced is not None:
+                func_node = child.referenced
 
         # On calcule la signature complète avant d'initialiser le reste
         signature = get_function_signature(func_node)

@@ -13,7 +13,7 @@ class ConstructorClassFunctionCallEntity(Entity):
 
         for child in node.walk_preorder():
             if child.kind in [clang.cindex.CursorKind.CALL_EXPR] and child.referenced is not None:
-                if child.referenced.kind in [clang.cindex.CursorKind.CONSTRUCTOR]:
+                if child.referenced.kind in [clang.cindex.CursorKind.CONSTRUCTOR, clang.cindex.CursorKind.FUNCTION_DECL]:
                     if child.referenced.location:
                         if not child.referenced.location.file.name.startswith("/"):
                             func_node = child.referenced

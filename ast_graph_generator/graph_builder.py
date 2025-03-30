@@ -95,4 +95,5 @@ def build_hierarchy_graph(node: clang.cindex.Cursor, graph: nx.DiGraph, ALLOWED_
             else: 
                 build_hierarchy_graph(child, graph, ALLOWED_PATHS, parent_node=child_entity.name)
         else:
+            # si le noeud ne nous interesse pas le lien est passé au noeudds en dessous
             build_hierarchy_graph(child, graph, ALLOWED_PATHS, parent_node)
